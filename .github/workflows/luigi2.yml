@@ -1,0 +1,83 @@
+name: Luigi2 griglia M
+
+on:
+  workflow_dispatch:
+    inputs:
+      NI:
+        description: "righe (iL -> E)"
+        default: "200"
+      NJ:
+        description: "colonne (jL -> a)"
+        default: "200"
+      K:
+        description: "numero di fette (job), max 256"
+        default: "200"
+
+jobs:
+  verifica:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: matlab-actions/setup-matlab@v2
+        with:
+          products: Parallel_Computing_Toolbox
+      - uses: matlab-actions/run-command@v2
+        with:
+          command: verifica_ci
+
+  prepara:
+    needs: verifica
+    runs-on: ubuntu-latest
+    outputs:
+      shards: ${{ steps.m.outputs.shards }}
+    steps:
+      - id: m
+        run: echo "shards=$(python3 -c 'import json;print(json.dumps(list(range(1,${{ inputs.K }}+1))))')" >> "$GITHUB_OUTPUT"
+
+  calcola:
+    needs: prepara
+    runs-on: ubuntu-latest
+    timeout-minutes: 350
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        k: ${{ fromJson(needs.prepara.outputs.shards) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: matlab-actions/setup-matlab@v2
+        with:
+          products: Parallel_Computing_Toolbox
+          cache: true
+      - uses: matlab-actions/run-command@v2
+        with:
+          command: run_shard(${{ matrix.k }}, ${{ inputs.K }}, ${{ inputs.NI }}, ${{ inputs.NJ }})
+      - uses: actions/upload-artifact@v4
+        with:
+          name: shard-${{ matrix.k }}
+          path: shard_${{ matrix.k }}.mat
+          retention-days: 7
+
+  unisci:
+    needs: calcola
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: shard-*
+          path: shards
+          merge-multiple: true
+      - uses: matlab-actions/setup-matlab@v2
+      - uses: matlab-actions/run-command@v2
+        with:
+          command: merge_shards(${{ inputs.NI }}, ${{ inputs.NJ }})
+      - uses: actions/upload-artifact@v4
+        with:
+          name: M_${{ inputs.NI }}x${{ inputs.NJ }}
+          path: |
+            M_*.mat
+            M_*.csv
+          retention-days: 90
