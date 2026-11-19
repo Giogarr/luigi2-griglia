@@ -1,0 +1,1168 @@
+﻿verifica	Set up job	´╗┐2026-11-19T21:08:52.2410853Z Current runner version: '2.338.2'
+verifica	Set up job	2026-11-19T21:08:52.2442723Z ##[group]Runner Image Provisioner
+verifica	Set up job	2026-11-19T21:08:52.2443789Z Hosted Compute Agent
+verifica	Set up job	2026-11-19T21:08:52.2444595Z Version: 20261111.635
+verifica	Set up job	2026-11-19T21:08:52.2445568Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+verifica	Set up job	2026-11-19T21:08:52.2446494Z Build Date: 2026-11-11T01:49:01Z
+verifica	Set up job	2026-11-19T21:08:52.2447514Z Worker ID: {fdf87f9f-f6c7-418e-984c-ded49b82d8ef}
+verifica	Set up job	2026-11-19T21:08:52.2448401Z Region: westus3
+verifica	Set up job	2026-11-19T21:08:52.2449153Z Cloud: Azure
+verifica	Set up job	2026-11-19T21:08:52.2449844Z ##[endgroup]
+verifica	Set up job	2026-11-19T21:08:52.2451578Z ##[group]Operating System
+verifica	Set up job	2026-11-19T21:08:52.2452456Z Ubuntu
+verifica	Set up job	2026-11-19T21:08:52.2453163Z 26.04.1
+verifica	Set up job	2026-11-19T21:08:52.2453784Z LTS
+verifica	Set up job	2026-11-19T21:08:52.2454540Z ##[endgroup]
+verifica	Set up job	2026-11-19T21:08:52.2455525Z ##[group]Runner Image
+verifica	Set up job	2026-11-19T21:08:52.2456446Z Image: ubuntu-26.04
+verifica	Set up job	2026-11-19T21:08:52.2457176Z Version: 20261116.202.1
+verifica	Set up job	2026-11-19T21:08:52.2458453Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261116.202/images/ubuntu/Ubuntu2604-Readme.md
+verifica	Set up job	2026-11-19T21:08:52.2460762Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261116.202
+verifica	Set up job	2026-11-19T21:08:52.2462148Z ##[endgroup]
+verifica	Set up job	2026-11-19T21:08:52.2463595Z ##[group]GITHUB_TOKEN Permissions
+verifica	Set up job	2026-11-19T21:08:52.2466018Z Contents: read
+verifica	Set up job	2026-11-19T21:08:52.2466822Z Metadata: read
+verifica	Set up job	2026-11-19T21:08:52.2467484Z Packages: read
+verifica	Set up job	2026-11-19T21:08:52.2468258Z ##[endgroup]
+verifica	Set up job	2026-11-19T21:08:52.2470743Z Secret source: Actions
+verifica	Set up job	2026-11-19T21:08:52.2472051Z Cache mode: write
+verifica	Set up job	2026-11-19T21:08:52.2472938Z Prepare workflow directory
+verifica	Set up job	2026-11-19T21:08:52.2833533Z Prepare all required actions
+verifica	Set up job	2026-11-19T21:08:52.2872416Z Getting action download info
+verifica	Set up job	2026-11-19T21:08:52.6161321Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+verifica	Set up job	2026-11-19T21:08:52.6832074Z Download action repository 'matlab-actions/setup-matlab@v2' (SHA:aa8bbc7b76daa63c5d456d1430cbd6cb5b626ab4)
+verifica	Set up job	2026-11-19T21:08:53.1889848Z Download action repository 'matlab-actions/run-command@v2' (SHA:37b454c384483087929a3d652be474ba585a9659)
+verifica	Set up job	2026-11-19T21:08:54.1980937Z Complete job name: verifica
+verifica	Run actions/checkout@v4	´╗┐2026-11-19T21:08:54.2779909Z ##[group]Run actions/checkout@v4
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.2781040Z with:
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.2781741Z   repository: Giogarr/luigi2-griglia
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.2788714Z   token: ***
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.2789412Z   ssh-strict: true
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.2790115Z   ssh-user: git
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.2790834Z   persist-credentials: true
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.2791632Z   clean: true
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.2792351Z   sparse-checkout-cone-mode: true
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.2793200Z   fetch-depth: 1
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.2793887Z   fetch-tags: false
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.2794604Z   show-progress: true
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.2795416Z   lfs: false
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.2796098Z   submodules: false
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.2796826Z   set-safe-directory: true
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.2797652Z   allow-unsafe-pr-checkout: false
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.2798716Z ##[endgroup]
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5043564Z Syncing repository: Giogarr/luigi2-griglia
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5046973Z ##[group]Getting Git version info
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5048306Z Working directory is '/home/runner/work/luigi2-griglia/luigi2-griglia'
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5050464Z [command]/usr/bin/git version
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5051310Z git version 2.56.1
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5062215Z ##[endgroup]
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5076254Z Temporarily overriding HOME='/home/runner/work/_temp/88b059d6-dc87-412d-8020-63f869ed1c5f' before making global git config changes
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5080242Z Adding repository directory to the temporary git global config as a safe directory
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5083539Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/luigi2-griglia/luigi2-griglia
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5261708Z Deleting the contents of '/home/runner/work/luigi2-griglia/luigi2-griglia'
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5265431Z ##[group]Initializing the repository
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5271108Z [command]/usr/bin/git init /home/runner/work/luigi2-griglia/luigi2-griglia
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5554390Z hint: Using 'master' as the name for the initial branch. This default branch name
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5557151Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5559608Z hint: to use in all of your new repositories, which will suppress this warning,
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5561477Z hint: call:
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5562613Z hint:
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5564159Z hint: 	git config --global init.defaultBranch <name>
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5565884Z hint:
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5567343Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5569742Z hint: 'development'. The just-created branch can be renamed via this command:
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5571650Z hint:
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5572784Z hint: 	git branch -m <name>
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5573801Z hint:
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5574986Z hint: Disable this message with "git config set advice.defaultBranchName false"
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5577173Z Initialized empty Git repository in /home/runner/work/luigi2-griglia/luigi2-griglia/.git/
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5580626Z [command]/usr/bin/git remote add origin https://github.com/Giogarr/luigi2-griglia
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5641214Z ##[endgroup]
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5643160Z ##[group]Disabling automatic garbage collection
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5644636Z [command]/usr/bin/git config --local gc.auto 0
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5668261Z ##[endgroup]
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5669898Z ##[group]Setting up auth
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5673809Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.5706598Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.6040629Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.6070801Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.6299079Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.6327925Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.6557214Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.6591394Z ##[endgroup]
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.6593348Z ##[group]Fetching the repository
+verifica	Run actions/checkout@v4	2026-11-19T21:08:54.6601262Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +a7b7356d94a6fe50e3f4478d83bdb687b0529c85:refs/remotes/origin/master
+verifica	Run actions/checkout@v4	2026-11-19T21:08:55.1068520Z From https://github.com/Giogarr/luigi2-griglia
+verifica	Run actions/checkout@v4	2026-11-19T21:08:55.1069781Z  * [new ref]         a7b7356d94a6fe50e3f4478d83bdb687b0529c85 -> origin/master
+verifica	Run actions/checkout@v4	2026-11-19T21:08:55.1072423Z ##[endgroup]
+verifica	Run actions/checkout@v4	2026-11-19T21:08:55.1072823Z ##[group]Determining the checkout info
+verifica	Run actions/checkout@v4	2026-11-19T21:08:55.1074700Z ##[endgroup]
+verifica	Run actions/checkout@v4	2026-11-19T21:08:55.1079673Z [command]/usr/bin/git sparse-checkout disable
+verifica	Run actions/checkout@v4	2026-11-19T21:08:55.1123692Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+verifica	Run actions/checkout@v4	2026-11-19T21:08:55.1150065Z ##[group]Checking out the ref
+verifica	Run actions/checkout@v4	2026-11-19T21:08:55.1155655Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+verifica	Run actions/checkout@v4	2026-11-19T21:08:55.1211372Z Reset branch 'master'
+verifica	Run actions/checkout@v4	2026-11-19T21:08:55.1216802Z branch 'master' set up to track 'origin/master'.
+verifica	Run actions/checkout@v4	2026-11-19T21:08:55.1220147Z ##[endgroup]
+verifica	Run actions/checkout@v4	2026-11-19T21:08:55.1254734Z [command]/usr/bin/git log -1 --format=%H
+verifica	Run actions/checkout@v4	2026-11-19T21:08:55.1275568Z a7b7356d94a6fe50e3f4478d83bdb687b0529c85
+verifica	Run matlab-actions/setup-matlab@v2	´╗┐2026-11-19T21:08:55.1483098Z ##[group]Run matlab-actions/setup-matlab@v2
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.1483393Z with:
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.1483583Z   products: Parallel_Computing_Toolbox
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.1483973Z   release: latest
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.1484172Z   install-system-dependencies: auto
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.1484396Z   cache: false
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.1484569Z ##[endgroup]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.3697979Z Auto-detected runner type: GitHub-hosted
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.3698651Z System dependencies will be installed (auto mode)
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.3699689Z ##[group]Preparing system for MATLAB
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.4864944Z [command]/usr/bin/sudo -E bash /home/runner/work/_temp/5bf756d1-b1ab-4661-9243-4984f5588dd7 r2026b
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.4908438Z sudo: preserving the entire environment is not supported, '-E' is ignored
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.5111657Z MATLAB R2026b is not supported on 'ubuntu:resolute'.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.5112446Z For more details, see https://www.mathworks.com/support/requirements/matlab-system-requirements.html
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.5756203Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.5937844Z Get:6 https://packages.microsoft.com/ubuntu/26.04/prod resolute InRelease [3964 B]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.6047192Z Hit:2 http://azure.archive.ubuntu.com/ubuntu resolute InRelease
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.6064771Z Get:3 http://azure.archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.6137952Z Get:4 http://azure.archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.6154763Z Get:5 http://azure.archive.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.6233699Z Get:7 https://packages.microsoft.com/ubuntu/26.04/prod resolute/main amd64 Packages [165 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.6413922Z Get:8 https://packages.microsoft.com/ubuntu/26.04/prod resolute/main arm64 Packages [151 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.6533930Z Get:9 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 Packages [901 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.6591406Z Get:10 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main Translation-en [200 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.6642083Z Get:11 http://azure.archive.ubuntu.com/ubuntu resolute-updates/universe amd64v3 Packages [394 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.6666327Z Get:12 http://azure.archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [124 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.6724532Z Get:13 http://azure.archive.ubuntu.com/ubuntu resolute-updates/restricted amd64v3 Packages [629 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.6760595Z Get:14 http://azure.archive.ubuntu.com/ubuntu resolute-updates/restricted Translation-en [130 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.6771603Z Get:15 http://azure.archive.ubuntu.com/ubuntu resolute-security/main amd64v3 Packages [721 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.6807918Z Get:16 http://azure.archive.ubuntu.com/ubuntu resolute-security/main Translation-en [158 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.6820909Z Get:17 http://azure.archive.ubuntu.com/ubuntu resolute-security/universe amd64v3 Packages [222 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:55.6842991Z Get:18 http://azure.archive.ubuntu.com/ubuntu resolute-security/universe Translation-en [72.7 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:58.3712330Z Fetched 4283 kB in 0s (13.9 MB/s)
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:58.9368939Z Reading package lists...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:58.9600142Z Reading package lists...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1054973Z Building dependency tree...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1060652Z Reading state information...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1194146Z Skipping ca-certificates, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1194876Z Skipping debianutils, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1195527Z debianutils set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1196035Z Skipping ibverbs-providers, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1196595Z ibverbs-providers set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1197112Z Skipping libasound2t64, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1197617Z libasound2t64 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1198097Z Skipping libatk1.0-0t64, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1199096Z libatk1.0-0t64 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1206104Z Skipping libatk-bridge2.0-0t64, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1207158Z libatk-bridge2.0-0t64 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1207691Z Skipping libatomic1, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1208164Z libatomic1 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1208635Z Skipping libatspi2.0-0t64, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1209134Z libatspi2.0-0t64 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1209576Z Skipping libc6, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1210023Z Skipping libcap2, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1210313Z libcap2 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1210593Z Skipping libcrypt1, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1210878Z libcrypt1 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1211294Z Skipping libcups2t64, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1211597Z libcups2t64 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1211898Z Skipping libfontconfig1, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1212232Z libfontconfig1 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1212603Z Skipping libfribidi0, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1212956Z libfribidi0 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1213235Z Skipping libgbm1, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1213521Z libgbm1 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1213787Z Skipping libgl1, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1214067Z libgl1 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1214346Z Skipping libglib2.0-0t64, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1214648Z libglib2.0-0t64 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1214930Z Skipping libglx0, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1215428Z libglx0 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1283844Z Skipping libgstreamer1.0-0, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1284651Z libgstreamer1.0-0 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1285242Z Skipping libibverbs1, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1285642Z libibverbs1 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1286124Z Skipping libice6, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1286612Z libice6 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1287016Z Skipping libnspr4, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1287429Z libnspr4 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1287824Z Skipping libnss3, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1288225Z libnss3 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1288591Z Skipping libnuma1, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1289017Z libnuma1 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1289439Z Skipping libpam0g, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1289880Z libpam0g set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1290309Z Skipping libpixman-1-0, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1290773Z libpixman-1-0 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1291254Z Skipping libpython3.14, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1291720Z libpython3.14 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1292186Z Skipping libtirpc3t64, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1292681Z libtirpc3t64 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1293144Z Skipping libudev1, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1293608Z libudev1 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1294044Z Skipping libuuid1, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1295168Z libuuid1 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1295643Z Skipping libxcomposite1, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1296315Z libxcomposite1 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1296787Z Skipping libxdamage1, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1297284Z libxdamage1 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1297721Z Skipping libxfixes3, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1298189Z libxfixes3 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1298652Z Skipping libxfont2, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1299050Z libxfont2 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1299448Z Skipping libxft2, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1299757Z libxft2 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1300037Z Skipping libxinerama1, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1300349Z libxinerama1 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1300628Z Skipping libxrandr2, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1300926Z libxrandr2 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1301204Z Skipping libxt6t64, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1301484Z libxt6t64 set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1340728Z Skipping libxtst6, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1341271Z Skipping locales, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1341750Z Skipping make, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1342201Z Skipping net-tools, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1342665Z Skipping procps, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1343050Z procps set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1343420Z Skipping sudo, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1343874Z Skipping unzip, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1344322Z Skipping wget, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1344780Z Skipping x11-xkb-utils, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1345367Z x11-xkb-utils set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1345750Z Skipping xkb-data, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1346128Z xkb-data set to manually installed.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1346495Z Skipping zlib1g, it is already installed and upgrade is not set.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.1908404Z Solving dependencies...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.2695817Z The following additional packages will be installed:
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.2696646Z   libamd-comgr3 libamdhip64-7 libboost-chrono1.90.0 libboost-filesystem1.90.0
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.2697396Z   libboost-serialization1.90.0 libboost-thread1.90.0 libflac14
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.2698047Z   libhsa-runtime64-1 libhsakmt1 libibmad5 libibumad3 libmp3lame0
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.2702509Z   libmpg123-0t64 libopus0 liborc-0.4-0t64 libvorbisenc2
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.2707802Z Suggested packages:
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.2708314Z   libvisual-0.4-plugins opus-tools uhd-host
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.2709051Z Recommended packages:
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.2921714Z   gstreamer1.0-plugins-base
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.2922103Z The following NEW packages will be installed:
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.2922470Z   libamd-comgr3 libamdhip64-7 libboost-chrono1.90.0 libboost-filesystem1.90.0
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.2923013Z   libboost-serialization1.90.0 libboost-thread1.90.0 libflac14
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.2923633Z   libgstreamer-plugins-base1.0-0 libhidapi-libusb0 libhsa-runtime64-1
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.2924189Z   libhsakmt1 libibmad5 libibumad3 libmosquitto1 libmosquittopp1 libmp3lame0
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.2924638Z   libmpg123-0t64 libopengl0 libopus0 liborc-0.4-0t64 libpsm2-2 librdmacm1t64
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.2928177Z   libsndfile1 libucx0 libuhd4.9.0 libvorbisenc2 locales-all
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.3127074Z 0 upgraded, 27 newly installed, 0 to remove and 15 not upgraded.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.3127618Z Need to get 50.0 MB of archives.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.3128012Z After this operation, 372 MB of additional disk space will be used.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.3128612Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:08:59.3751148Z Get:2 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libamd-comgr3 amd64 7.1.1+dfsg-0ubuntu1 [15.3 MB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:00.4131339Z Get:3 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libhsakmt1 amd64 7.1.0+dfsg-0ubuntu9 [78.3 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:00.5042910Z Get:4 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libhsa-runtime64-1 amd64 7.1.0+dfsg-0ubuntu9 [604 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:00.5588612Z Get:5 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libamdhip64-7 amd64 7.1.0-0ubuntu2 [11.1 MB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:01.1359779Z Get:6 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libboost-chrono1.90.0 amd64 1.90.0-6ubuntu1 [238 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:01.1843335Z Get:7 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libboost-filesystem1.90.0 amd64 1.90.0-6ubuntu1 [286 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:01.2334117Z Get:8 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libboost-serialization1.90.0 amd64 1.90.0-6ubuntu1 [338 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:01.2838488Z Get:9 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libboost-thread1.90.0 amd64 1.90.0-6ubuntu1 [265 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:01.3332070Z Get:10 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libflac14 amd64 1.5.0+ds-5 [172 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:01.3806806Z Get:11 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 liborc-0.4-0t64 amd64 1:0.4.42-2 [285 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:01.4300081Z Get:12 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libgstreamer-plugins-base1.0-0 amd64 1.28.2-1ubuntu0.3 [926 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:01.5286826Z Get:13 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libmosquitto1 amd64 2.0.22-5build1 [55.7 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:01.5747940Z Get:14 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libmosquittopp1 amd64 2.0.22-5build1 [14.2 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:01.6210041Z Get:15 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libmpg123-0t64 amd64 1.33.3-2 [180 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:01.6681972Z Get:16 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libmp3lame0 amd64 3.101~svn6525+dfsg-2ubuntu0.1 [123 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:01.7150110Z Get:17 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libopus0 amd64 1.6.1-1 [3557 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:01.9120989Z Get:18 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libpsm2-2 amd64 11.2.185-2.1build1 [195 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:01.9597877Z Get:19 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 librdmacm1t64 amd64 61.0-2ubuntu3 [75.5 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:02.0064266Z Get:20 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libvorbisenc2 amd64 1.3.7-3build2 [79.9 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:02.0526682Z Get:21 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libsndfile1 amd64 1.2.2-4 [229 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:02.1008857Z Get:22 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libibumad3 amd64 61.0-2ubuntu3 [31.9 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:02.1495705Z Get:23 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libibmad5 amd64 61.0-2ubuntu3 [44.3 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:02.1960747Z Get:24 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libucx0 amd64 1.20.0+ds-4ubuntu2 [958 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:02.3324034Z Get:25 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libuhd4.9.0 amd64 4.9.0.1-1ubuntu1 [3721 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:02.7457659Z Get:26 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libhidapi-libusb0 amd64 0.15.0-2 [19.2 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:02.7912649Z Get:27 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libopengl0 amd64 1.7.0-3 [32.8 kB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:02.8370715Z Get:28 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 locales-all amd64 2.43-2ubuntu2.7 [11.1 MB]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.2045604Z Fetched 50.0 MB in 5s (10.8 MB/s)
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.2268348Z Selecting previously unselected package libamd-comgr3:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.2468382Z (Reading database ... 
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.2468795Z (Reading database ... 5%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.2469155Z (Reading database ... 10%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.2469522Z (Reading database ... 15%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.2469857Z (Reading database ... 20%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.2470277Z (Reading database ... 25%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.2470723Z (Reading database ... 30%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.2471195Z (Reading database ... 35%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.2471466Z (Reading database ... 40%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.2471736Z (Reading database ... 45%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.2472000Z (Reading database ... 50%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.2684772Z (Reading database ... 55%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.2891432Z (Reading database ... 60%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.3130392Z (Reading database ... 65%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.3312684Z (Reading database ... 70%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.3600218Z (Reading database ... 75%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.4487516Z (Reading database ... 80%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.5527204Z (Reading database ... 85%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.7036665Z (Reading database ... 90%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.9019094Z (Reading database ... 95%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.9019461Z (Reading database ... 100%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.9019763Z (Reading database ... 214296 files and directories currently installed.)
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.9062763Z Preparing to unpack .../00-libamd-comgr3_7.1.1+dfsg-0ubuntu1_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:04.9157471Z Unpacking libamd-comgr3:amd64 (7.1.1+dfsg-0ubuntu1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:05.8050564Z Selecting previously unselected package libhsakmt1:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:05.8175590Z Preparing to unpack .../01-libhsakmt1_7.1.0+dfsg-0ubuntu9_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:05.8182518Z Unpacking libhsakmt1:amd64 (7.1.0+dfsg-0ubuntu9) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:05.8393636Z Selecting previously unselected package libhsa-runtime64-1:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:05.8515999Z Preparing to unpack .../02-libhsa-runtime64-1_7.1.0+dfsg-0ubuntu9_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:05.8522579Z Unpacking libhsa-runtime64-1:amd64 (7.1.0+dfsg-0ubuntu9) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:05.9037493Z Selecting previously unselected package libamdhip64-7:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:05.9159894Z Preparing to unpack .../03-libamdhip64-7_7.1.0-0ubuntu2_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:05.9166615Z Unpacking libamdhip64-7:amd64 (7.1.0-0ubuntu2) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.1504388Z Selecting previously unselected package libboost-chrono1.90.0:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.1628099Z Preparing to unpack .../04-libboost-chrono1.90.0_1.90.0-6ubuntu1_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.1793023Z Unpacking libboost-chrono1.90.0:amd64 (1.90.0-6ubuntu1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.2133717Z Selecting previously unselected package libboost-filesystem1.90.0:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.2256228Z Preparing to unpack .../05-libboost-filesystem1.90.0_1.90.0-6ubuntu1_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.2261700Z Unpacking libboost-filesystem1.90.0:amd64 (1.90.0-6ubuntu1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.2591781Z Selecting previously unselected package libboost-serialization1.90.0:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.2710467Z Preparing to unpack .../06-libboost-serialization1.90.0_1.90.0-6ubuntu1_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.2717165Z Unpacking libboost-serialization1.90.0:amd64 (1.90.0-6ubuntu1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.3057562Z Selecting previously unselected package libboost-thread1.90.0:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.3176211Z Preparing to unpack .../07-libboost-thread1.90.0_1.90.0-6ubuntu1_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.3182900Z Unpacking libboost-thread1.90.0:amd64 (1.90.0-6ubuntu1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.3725514Z Selecting previously unselected package libflac14:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.3842087Z Preparing to unpack .../08-libflac14_1.5.0+ds-5_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.3848751Z Unpacking libflac14:amd64 (1.5.0+ds-5) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.4086209Z Selecting previously unselected package liborc-0.4-0t64:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.4204799Z Preparing to unpack .../09-liborc-0.4-0t64_1%3a0.4.42-2_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.4211882Z Unpacking liborc-0.4-0t64:amd64 (1:0.4.42-2) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.4480307Z Selecting previously unselected package libgstreamer-plugins-base1.0-0:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.4600366Z Preparing to unpack .../10-libgstreamer-plugins-base1.0-0_1.28.2-1ubuntu0.3_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.4606961Z Unpacking libgstreamer-plugins-base1.0-0:amd64 (1.28.2-1ubuntu0.3) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.5047314Z Selecting previously unselected package libmosquitto1:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.5169149Z Preparing to unpack .../11-libmosquitto1_2.0.22-5build1_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.5175860Z Unpacking libmosquitto1:amd64 (2.0.22-5build1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.5378270Z Selecting previously unselected package libmosquittopp1:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.5503075Z Preparing to unpack .../12-libmosquittopp1_2.0.22-5build1_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.5613353Z Unpacking libmosquittopp1:amd64 (2.0.22-5build1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.5845305Z Selecting previously unselected package libmpg123-0t64:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.5965201Z Preparing to unpack .../13-libmpg123-0t64_1.33.3-2_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.5971616Z Unpacking libmpg123-0t64:amd64 (1.33.3-2) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.6175702Z Selecting previously unselected package libmp3lame0:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.6294938Z Preparing to unpack .../14-libmp3lame0_3.101~svn6525+dfsg-2ubuntu0.1_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.6300679Z Unpacking libmp3lame0:amd64 (3.101~svn6525+dfsg-2ubuntu0.1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.6500941Z Selecting previously unselected package libopus0:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.6620623Z Preparing to unpack .../15-libopus0_1.6.1-1_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.6627390Z Unpacking libopus0:amd64 (1.6.1-1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.7158969Z Selecting previously unselected package libpsm2-2.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.7281297Z Preparing to unpack .../16-libpsm2-2_11.2.185-2.1build1_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.7287976Z Unpacking libpsm2-2 (11.2.185-2.1build1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.7691617Z Selecting previously unselected package librdmacm1t64:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.7818715Z Preparing to unpack .../17-librdmacm1t64_61.0-2ubuntu3_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.7825898Z Unpacking librdmacm1t64:amd64 (61.0-2ubuntu3) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.8026849Z Selecting previously unselected package libvorbisenc2:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.8149434Z Preparing to unpack .../18-libvorbisenc2_1.3.7-3build2_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.8156650Z Unpacking libvorbisenc2:amd64 (1.3.7-3build2) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.8376073Z Selecting previously unselected package libsndfile1:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.8497422Z Preparing to unpack .../19-libsndfile1_1.2.2-4_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.8504021Z Unpacking libsndfile1:amd64 (1.2.2-4) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.8717232Z Selecting previously unselected package libibumad3:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.8837874Z Preparing to unpack .../20-libibumad3_61.0-2ubuntu3_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.8843967Z Unpacking libibumad3:amd64 (61.0-2ubuntu3) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.9031877Z Selecting previously unselected package libibmad5:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.9150912Z Preparing to unpack .../21-libibmad5_61.0-2ubuntu3_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.9157431Z Unpacking libibmad5:amd64 (61.0-2ubuntu3) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.9469859Z Selecting previously unselected package libucx0:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.9590221Z Preparing to unpack .../22-libucx0_1.20.0+ds-4ubuntu2_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.9597062Z Unpacking libucx0:amd64 (1.20.0+ds-4ubuntu2) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:06.9973926Z Selecting previously unselected package libuhd4.9.0:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:07.0096589Z Preparing to unpack .../23-libuhd4.9.0_4.9.0.1-1ubuntu1_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:07.0102921Z Unpacking libuhd4.9.0:amd64 (4.9.0.1-1ubuntu1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:07.1403592Z Selecting previously unselected package libhidapi-libusb0:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:07.1527409Z Preparing to unpack .../24-libhidapi-libusb0_0.15.0-2_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:07.1534042Z Unpacking libhidapi-libusb0:amd64 (0.15.0-2) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:07.1780545Z Selecting previously unselected package libopengl0:amd64.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:07.1901475Z Preparing to unpack .../25-libopengl0_1.7.0-3_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:07.1923697Z Unpacking libopengl0:amd64 (1.7.0-3) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:07.2139727Z Selecting previously unselected package locales-all.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:07.2260274Z Preparing to unpack .../26-locales-all_2.43-2ubuntu2.7_amd64v3.deb ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:07.2266118Z Unpacking locales-all (2.43-2ubuntu2.7) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.3881747Z Setting up libboost-chrono1.90.0:amd64 (1.90.0-6ubuntu1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5012207Z Setting up libmosquitto1:amd64 (2.0.22-5build1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5032449Z Setting up libibumad3:amd64 (61.0-2ubuntu3) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5049744Z Setting up libibmad5:amd64 (61.0-2ubuntu3) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5067096Z Setting up libmosquittopp1:amd64 (2.0.22-5build1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5083114Z Setting up libmpg123-0t64:amd64 (1.33.3-2) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5098576Z Setting up libboost-thread1.90.0:amd64 (1.90.0-6ubuntu1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5114604Z Setting up locales-all (2.43-2ubuntu2.7) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5154405Z Setting up libopengl0:amd64 (1.7.0-3) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5174039Z Setting up liborc-0.4-0t64:amd64 (1:0.4.42-2) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5191029Z Setting up libopus0:amd64 (1.6.1-1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5208741Z Setting up libhidapi-libusb0:amd64 (0.15.0-2) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5237220Z Setting up libflac14:amd64 (1.5.0+ds-5) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5253703Z Setting up libamd-comgr3:amd64 (7.1.1+dfsg-0ubuntu1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5328605Z Setting up libpsm2-2 (11.2.185-2.1build1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5348706Z Setting up librdmacm1t64:amd64 (61.0-2ubuntu3) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5370970Z Setting up libboost-serialization1.90.0:amd64 (1.90.0-6ubuntu1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5388920Z Setting up libboost-filesystem1.90.0:amd64 (1.90.0-6ubuntu1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5406203Z Setting up libuhd4.9.0:amd64 (4.9.0.1-1ubuntu1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5422326Z Setting up libhsakmt1:amd64 (7.1.0+dfsg-0ubuntu9) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5440955Z Setting up libmp3lame0:amd64 (3.101~svn6525+dfsg-2ubuntu0.1) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5459691Z Setting up libvorbisenc2:amd64 (1.3.7-3build2) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5477861Z Setting up libgstreamer-plugins-base1.0-0:amd64 (1.28.2-1ubuntu0.3) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5495170Z Setting up libhsa-runtime64-1:amd64 (7.1.0+dfsg-0ubuntu9) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5512468Z Setting up libsndfile1:amd64 (1.2.2-4) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5531510Z Setting up libamdhip64-7:amd64 (7.1.0-0ubuntu2) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5558843Z Setting up libucx0:amd64 (1.20.0+ds-4ubuntu2) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:09.5581067Z Processing triggers for libc-bin (2.43-2ubuntu2.7) ...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:10.4132451Z 
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:10.4133003Z Running kernel seems to be up-to-date.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:10.4133356Z 
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:10.4133468Z Restarting services...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:10.4216156Z 
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:10.4216797Z Service restarts being deferred:
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:10.4218790Z  systemctl restart hosted-compute-agent.service
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:10.4219102Z 
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:10.4220600Z No containers need to be restarted.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:10.4224351Z 
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:10.4224584Z No user sessions are running outdated binaries.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:10.4224812Z 
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:10.4224980Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:11.2164970Z ##[endgroup]
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:11.2165690Z ##[group]Setting up MATLAB
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:12.3566935Z [command]/usr/bin/chmod +x /home/runner/work/_temp/mpm
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:14.0212622Z Installing with the following parameters:
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:14.0213170Z --destination=/opt/hostedtoolcache/MATLAB/2026.2.999/x64
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:14.0213602Z --release=R2026b
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:14.0213906Z --products=Parallel_Computing_Toolbox, MATLAB
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:14.0214592Z ---------------------------------------------
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:17.8535755Z The following MathWorks Products are licensed under The MathWorks, Inc. Software License Agreement,
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:17.8536801Z available in the installation of the MathWorks Product or in the virtual machine image.
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:17.8537155Z MATLAB, Parallel_Computing_Toolbox
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:17.8537315Z 
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:17.8537383Z Starting install
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:17.8548041Z Products will be installed to: /opt/hostedtoolcache/MATLAB/2026.2.999/x64
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:19.3252613Z 
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:21.0961742Z Installing... 2%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:23.0598100Z Installing... 4%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:23.9464799Z Installing... 10%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:26.0167134Z Installing... 12%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:27.0694220Z Installing... 14%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:30.1485307Z Installing... 16%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:30.8975775Z Installing... 18%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:31.7827065Z Installing... 24%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:33.6514150Z Installing... 27%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:35.1695329Z Installing... 29%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:37.3747467Z Installing... 31%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:39.2512894Z Installing... 33%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:40.4791347Z Installing... 35%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:41.7420864Z Installing... 37%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:44.5983715Z Installing... 39%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:47.8606139Z Installing... 41%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:50.1613205Z Installing... 43%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:52.9621800Z Installing... 45%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:54.6467425Z Installing... 47%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:09:58.1173114Z Installing... 49%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:10:01.9575848Z Installing... 51%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:10:08.6536904Z Installing... 53%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:10:12.6929635Z Installing... 55%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:10:14.3833183Z Installing... 58%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:10:15.8264081Z Installing... 60%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:10:16.4021860Z Installing... 87%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:10:18.5338882Z Installing... 93%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:10:20.0461702Z Installing... 95%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:10:22.3959695Z Installing... 97%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:10:23.3532651Z Installing... 99%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:10:23.3533032Z Installing... 100%
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:10:23.4053008Z Completing setup...
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:10:24.8533457Z Installation complete
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:10:28.5215455Z [command]/usr/bin/chmod +x /opt/hostedtoolcache/matlab-batch/v1/x64/matlab-batch
+verifica	Run matlab-actions/setup-matlab@v2	2026-11-19T21:10:28.5281437Z ##[endgroup]
+verifica	Run matlab-actions/run-command@v2	´╗┐2026-11-19T21:10:28.5744820Z ##[group]Run matlab-actions/run-command@v2
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:28.5745211Z with:
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:28.5745379Z   command: verifica_ci
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:28.5745556Z ##[endgroup]
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:28.6371865Z [command]/home/runner/work/_actions/matlab-actions/run-command/v2/dist/bin/glnxa64/run-matlab-command setenv('MW_ORIG_WORKING_FOLDER',cd('/tmp/run_matlab_command-1EiIMA')); command_b2ed13dd_7139_4ade_befd_fc4620f0882b 
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:31.8869416Z [^HWarning: Unable to locate a personal folder for $documents/MATLAB.]^H 
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:32.4188640Z [1/3] originale Luigi2.m 4x4...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:32.4682683Z 
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:32.4683154Z da =
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:32.4683347Z 
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:32.4683449Z     0.5000
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:32.4686938Z 
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:32.4686946Z 
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:32.4687034Z de =
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:32.4687134Z 
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:32.4687198Z     0.0500
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:32.4687321Z 
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:32.4790173Z Processing Forward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:34.6054464Z Processing Backward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:36.5809388Z Processing Forward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:38.4234337Z Processing Backward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:40.2594319Z Processing Forward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:42.0808445Z Processing Backward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:43.8978796Z Processing Forward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:45.7555434Z Processing Backward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:47.6392950Z Processing Forward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:49.5627198Z Processing Backward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:51.4930469Z Processing Forward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:53.3696812Z Processing Backward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:55.2748080Z Processing Forward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:57.1459440Z Processing Backward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:10:59.0188904Z Processing Forward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:00.8946417Z Processing Backward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:02.7489047Z Processing Forward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:04.7394689Z Processing Backward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:06.7159401Z Processing Forward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:08.6818508Z Processing Backward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:10.6473775Z Processing Forward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:12.5624506Z Processing Backward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:14.4757979Z Processing Forward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:16.3748240Z Processing Backward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:18.2713879Z Processing Forward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:20.3066630Z Processing Backward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:22.3384206Z Processing Forward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:24.3581386Z Processing Backward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:26.3986172Z Processing Forward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:28.3916061Z Processing Backward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:30.3741285Z Processing Forward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:32.3489761Z Processing Backward Sweep...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:34.3212064Z 
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:34.3212556Z SI =
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:34.3212755Z 
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:34.3212856Z      0     0     1     0
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:34.3213132Z      0     1     0     0
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:34.3213414Z      0     1     1     0
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:34.3213636Z      1     0     1     1
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:34.3213792Z 
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:34.3213797Z 
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:34.3213889Z M =
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:34.3214111Z 
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:34.3214297Z      0     0     1     0
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:34.3214540Z      0     1     0     0
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:34.3214762Z      0     1     1     0
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:34.3214976Z      1     0     1     1
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:34.3215305Z 
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:34.3221793Z [2/3] run_shard 4x4...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:35.6277650Z Starting parallel pool (parpool) using the 'Processes' profile ...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:43.6714066Z Connected to parallel pool with 2 workers.
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:11:43.9114635Z shard 1/1 ┬À 16 coppie ┬À parfor ┬À 2 worker
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6120733Z shard 1: 0.4 min ┬À 1.7 s/coppia (tempo reale)
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6128522Z [3/3] merge_shards 4x4...
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6245791Z ERRORE VERIFICA:
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6246147Z Index exceeds array bounds.
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6246401Z 
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6246514Z Error in merge_shards (line 14)
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6247032Z     assert(isempty(mancanti), '%d celle mancanti (prima: %d)', numel(mancanti), mancanti(1));
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6248073Z                                                                                 ^^^^^^^^^^^
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6248442Z Error in verifica_ci (line 10)
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6248729Z         merge_shards(4, 4);
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6248984Z         ^^^^^^^^^^^^^^^^^^
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6249307Z Error in command_b2ed13dd_7139_4ade_befd_fc4620f0882b (line 1)
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6250066Z cd(getenv('MW_ORIG_WORKING_FOLDER')); addpath('/home/runner/work/_actions/matlab-actions/run-command/v2/dist/plugins'); verifica_ci
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6250794Z                                                                                                                         ^^^^^^^^^^^
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6297819Z {^HIndex exceeds array bounds.
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6298072Z 
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6298210Z Error in merge_shards (line 14)
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6298738Z     assert(isempty(mancanti), '%d celle mancanti (prima: %d)', numel(mancanti), mancanti(1));
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6299318Z                                                                                 ^^^^^^^^^^^
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6299673Z Error in verifica_ci (line 10)
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6299943Z         merge_shards(4, 4);
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6300211Z         ^^^^^^^^^^^^^^^^^^
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6300540Z Error in command_b2ed13dd_7139_4ade_befd_fc4620f0882b (line 1)
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6301254Z cd(getenv('MW_ORIG_WORKING_FOLDER')); addpath('/home/runner/work/_actions/matlab-actions/run-command/v2/dist/plugins'); verifica_ci
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6302064Z                                                                                                                         ^^^^^^^^^^^
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:10.6302580Z }^H 
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:11.7647752Z exit status 1
+verifica	Run matlab-actions/run-command@v2	2026-11-19T21:12:11.7692818Z ##[error]Error: The process '/home/runner/work/_actions/matlab-actions/run-command/v2/dist/bin/glnxa64/run-matlab-command' failed with exit code 1
+verifica	Post Run matlab-actions/setup-matlab@v2	´╗┐2026-11-19T21:12:11.7828778Z Post job cleanup.
+verifica	Post Run actions/checkout@v4	´╗┐2026-11-19T21:12:11.8970297Z Post job cleanup.
+verifica	Post Run actions/checkout@v4	2026-11-19T21:12:11.9704488Z [command]/usr/bin/git version
+verifica	Post Run actions/checkout@v4	2026-11-19T21:12:11.9741459Z git version 2.56.1
+verifica	Post Run actions/checkout@v4	2026-11-19T21:12:11.9771388Z Temporarily overriding HOME='/home/runner/work/_temp/e1a23a2a-d198-4e84-b5b7-834e00a7d2ce' before making global git config changes
+verifica	Post Run actions/checkout@v4	2026-11-19T21:12:11.9772459Z Adding repository directory to the temporary git global config as a safe directory
+verifica	Post Run actions/checkout@v4	2026-11-19T21:12:11.9775174Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/luigi2-griglia/luigi2-griglia
+verifica	Post Run actions/checkout@v4	2026-11-19T21:12:11.9813012Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+verifica	Post Run actions/checkout@v4	2026-11-19T21:12:11.9844389Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+verifica	Post Run actions/checkout@v4	2026-11-19T21:12:12.0100358Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+verifica	Post Run actions/checkout@v4	2026-11-19T21:12:12.0123099Z http.https://github.com/.extraheader
+verifica	Post Run actions/checkout@v4	2026-11-19T21:12:12.0142682Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+verifica	Post Run actions/checkout@v4	2026-11-19T21:12:12.0177397Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+verifica	Post Run actions/checkout@v4	2026-11-19T21:12:12.0446911Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+verifica	Post Run actions/checkout@v4	2026-11-19T21:12:12.0477560Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+verifica	Complete job	´╗┐2026-11-19T21:12:12.0856221Z Cleaning up orphan processes
+verifica	Complete job	2026-11-19T21:12:12.1162281Z Terminate orphan process: pid (5869) (Xvfb)
+verifica	Complete job	2026-11-19T21:12:12.1225437Z Terminate orphan process: pid (5877) (Xvfb)
+verifica	Complete job	2026-11-19T21:12:12.1321509Z Terminate orphan process: pid (5887) (fluxbox)
+verifica	Complete job	2026-11-19T21:12:12.1373073Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, matlab-actions/run-command@v2, matlab-actions/setup-matlab@v2. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+unisci	Set up job	´╗┐2026-11-19T21:12:17.2086428Z Current runner version: '2.338.2'
+unisci	Set up job	2026-11-19T21:12:17.2114099Z ##[group]Runner Image Provisioner
+unisci	Set up job	2026-11-19T21:12:17.2115190Z Hosted Compute Agent
+unisci	Set up job	2026-11-19T21:12:17.2115826Z Version: 20261103.629
+unisci	Set up job	2026-11-19T21:12:17.2116490Z Commit: 15dbd9ccb5dbf34fae002b6ed1a2670f52df37bc
+unisci	Set up job	2026-11-19T21:12:17.2117631Z Build Date: 2026-11-03T17:26:59Z
+unisci	Set up job	2026-11-19T21:12:17.2118426Z Worker ID: {864ac0fb-c12c-4fea-9944-5e9604006246}
+unisci	Set up job	2026-11-19T21:12:17.2119231Z Region: northcentralus
+unisci	Set up job	2026-11-19T21:12:17.2119858Z Cloud: Azure
+unisci	Set up job	2026-11-19T21:12:17.2120433Z ##[endgroup]
+unisci	Set up job	2026-11-19T21:12:17.2122128Z ##[group]Operating System
+unisci	Set up job	2026-11-19T21:12:17.2122792Z Ubuntu
+unisci	Set up job	2026-11-19T21:12:17.2123401Z 26.04.1
+unisci	Set up job	2026-11-19T21:12:17.2123960Z LTS
+unisci	Set up job	2026-11-19T21:12:17.2124505Z ##[endgroup]
+unisci	Set up job	2026-11-19T21:12:17.2125125Z ##[group]Runner Image
+unisci	Set up job	2026-11-19T21:12:17.2125800Z Image: ubuntu-26.04
+unisci	Set up job	2026-11-19T21:12:17.2126487Z Version: 20261111.196.1
+unisci	Set up job	2026-11-19T21:12:17.2127959Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261111.196/images/ubuntu/Ubuntu2604-Readme.md
+unisci	Set up job	2026-11-19T21:12:17.2129898Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261111.196
+unisci	Set up job	2026-11-19T21:12:17.2130908Z ##[endgroup]
+unisci	Set up job	2026-11-19T21:12:17.2132206Z ##[group]GITHUB_TOKEN Permissions
+unisci	Set up job	2026-11-19T21:12:17.2134428Z Contents: read
+unisci	Set up job	2026-11-19T21:12:17.2135186Z Metadata: read
+unisci	Set up job	2026-11-19T21:12:17.2136229Z Packages: read
+unisci	Set up job	2026-11-19T21:12:17.2136907Z ##[endgroup]
+unisci	Set up job	2026-11-19T21:12:17.2139396Z Secret source: Actions
+unisci	Set up job	2026-11-19T21:12:17.2140457Z Cache mode: write
+unisci	Set up job	2026-11-19T21:12:17.2141478Z Prepare workflow directory
+unisci	Set up job	2026-11-19T21:12:17.2492873Z Prepare all required actions
+unisci	Set up job	2026-11-19T21:12:17.2542532Z Getting action download info
+unisci	Set up job	2026-11-19T21:12:17.5120486Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+unisci	Set up job	2026-11-19T21:12:17.6265319Z Download action repository 'actions/download-artifact@v4' (SHA:d3f86a106a0bac45b974a628896c90dbdf5c8093)
+unisci	Set up job	2026-11-19T21:12:17.9544916Z Download action repository 'matlab-actions/setup-matlab@v2' (SHA:aa8bbc7b76daa63c5d456d1430cbd6cb5b626ab4)
+unisci	Set up job	2026-11-19T21:12:18.2257149Z Download action repository 'matlab-actions/run-command@v2' (SHA:37b454c384483087929a3d652be474ba585a9659)
+unisci	Set up job	2026-11-19T21:12:18.7247967Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+unisci	Set up job	2026-11-19T21:12:18.9447160Z Complete job name: unisci
+unisci	Run actions/checkout@v4	´╗┐2026-11-19T21:12:19.0479081Z ##[group]Run actions/checkout@v4
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.0480452Z with:
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.0481310Z   repository: Giogarr/luigi2-griglia
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.0490312Z   token: ***
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.0491145Z   ssh-strict: true
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.0491989Z   ssh-user: git
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.0492837Z   persist-credentials: true
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.0493787Z   clean: true
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.0494642Z   sparse-checkout-cone-mode: true
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.0495658Z   fetch-depth: 1
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.0496483Z   fetch-tags: false
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.0497455Z   show-progress: true
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.0498367Z   lfs: false
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.0499160Z   submodules: false
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.0500022Z   set-safe-directory: true
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.0501005Z   allow-unsafe-pr-checkout: false
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.0502256Z ##[endgroup]
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3279715Z Syncing repository: Giogarr/luigi2-griglia
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3283231Z ##[group]Getting Git version info
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3284759Z Working directory is '/home/runner/work/luigi2-griglia/luigi2-griglia'
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3287704Z [command]/usr/bin/git version
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3288696Z git version 2.56.1
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3295864Z ##[endgroup]
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3312260Z Temporarily overriding HOME='/home/runner/work/_temp/5e03f513-df5d-487e-8447-fcab80c7ba05' before making global git config changes
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3315827Z Adding repository directory to the temporary git global config as a safe directory
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3319632Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/luigi2-griglia/luigi2-griglia
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3398648Z Deleting the contents of '/home/runner/work/luigi2-griglia/luigi2-griglia'
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3404744Z ##[group]Initializing the repository
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3407145Z [command]/usr/bin/git init /home/runner/work/luigi2-griglia/luigi2-griglia
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3521807Z hint: Using 'master' as the name for the initial branch. This default branch name
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3524665Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3527438Z hint: to use in all of your new repositories, which will suppress this warning,
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3529393Z hint: call:
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3530660Z hint:
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3532352Z hint: 	git config --global init.defaultBranch <name>
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3534266Z hint:
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3535972Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3538868Z hint: 'development'. The just-created branch can be renamed via this command:
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3541117Z hint:
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3542137Z hint: 	git branch -m <name>
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3543267Z hint:
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3544682Z hint: Disable this message with "git config set advice.defaultBranchName false"
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3547761Z Initialized empty Git repository in /home/runner/work/luigi2-griglia/luigi2-griglia/.git/
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3552955Z [command]/usr/bin/git remote add origin https://github.com/Giogarr/luigi2-griglia
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3610207Z ##[endgroup]
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3612106Z ##[group]Disabling automatic garbage collection
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3613823Z [command]/usr/bin/git config --local gc.auto 0
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3658320Z ##[endgroup]
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3660303Z ##[group]Setting up auth
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3665688Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.3713713Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.4217589Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.4258651Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.4566395Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.4606446Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.4908843Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.4952632Z ##[endgroup]
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.4954832Z ##[group]Fetching the repository
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.4965580Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +a7b7356d94a6fe50e3f4478d83bdb687b0529c85:refs/remotes/origin/master
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.7477890Z From https://github.com/Giogarr/luigi2-griglia
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.7481184Z  * [new ref]         a7b7356d94a6fe50e3f4478d83bdb687b0529c85 -> origin/master
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.7487582Z ##[endgroup]
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.7490190Z ##[group]Determining the checkout info
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.7492917Z ##[endgroup]
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.7495274Z [command]/usr/bin/git sparse-checkout disable
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.7554589Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.7588088Z ##[group]Checking out the ref
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.7591896Z [command]/usr/bin/git checkout --progress --force -B master refs/remotes/origin/master
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.7661719Z Reset branch 'master'
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.7668243Z branch 'master' set up to track 'origin/master'.
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.7675174Z ##[endgroup]
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.7720847Z [command]/usr/bin/git log -1 --format=%H
+unisci	Run actions/checkout@v4	2026-11-19T21:12:19.7747425Z a7b7356d94a6fe50e3f4478d83bdb687b0529c85
+unisci	Run actions/download-artifact@v4	´╗┐2026-11-19T21:12:19.8163352Z ##[group]Run actions/download-artifact@v4
+unisci	Run actions/download-artifact@v4	2026-11-19T21:12:19.8164513Z with:
+unisci	Run actions/download-artifact@v4	2026-11-19T21:12:19.8165271Z   pattern: shard-*
+unisci	Run actions/download-artifact@v4	2026-11-19T21:12:19.8166090Z   path: shards
+unisci	Run actions/download-artifact@v4	2026-11-19T21:12:19.8166890Z   merge-multiple: true
+unisci	Run actions/download-artifact@v4	2026-11-19T21:12:19.8168118Z   repository: Giogarr/luigi2-griglia
+unisci	Run actions/download-artifact@v4	2026-11-19T21:12:19.8169146Z   run-id: 44615792455
+unisci	Run actions/download-artifact@v4	2026-11-19T21:12:19.8169979Z ##[endgroup]
+unisci	Run actions/download-artifact@v4	2026-11-19T21:12:19.9926001Z (node:2544) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+unisci	Run actions/download-artifact@v4	2026-11-19T21:12:19.9929508Z (Use `node --trace-deprecation ...` to show where the warning was created)
+unisci	Run actions/download-artifact@v4	2026-11-19T21:12:20.1189940Z Found 0 artifact(s)
+unisci	Run actions/download-artifact@v4	2026-11-19T21:12:20.1191436Z Filtering artifacts by pattern 'shard-*'
+unisci	Run actions/download-artifact@v4	2026-11-19T21:12:20.1209807Z Total of 0 artifact(s) downloaded
+unisci	Run actions/download-artifact@v4	2026-11-19T21:12:20.1214304Z Download artifact has finished successfully
+unisci	Run matlab-actions/setup-matlab@v2	´╗┐2026-11-19T21:12:20.1384769Z ##[group]Run matlab-actions/setup-matlab@v2
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.1385272Z with:
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.1385610Z   release: latest
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.1385981Z   install-system-dependencies: auto
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.1386396Z   cache: false
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.1386737Z ##[endgroup]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.3648891Z Auto-detected runner type: GitHub-hosted
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.3650492Z System dependencies will be installed (auto mode)
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.3676355Z ##[group]Preparing system for MATLAB
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.5159793Z [command]/usr/bin/sudo -E bash /home/runner/work/_temp/0999bc12-f19d-4655-991e-42969afdbc57 r2026b
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.5204737Z sudo: preserving the entire environment is not supported, '-E' is ignored
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.5456102Z MATLAB R2026b is not supported on 'ubuntu:resolute'.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.5457648Z For more details, see https://www.mathworks.com/support/requirements/matlab-system-requirements.html
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.6254280Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.6723902Z Get:6 https://packages.microsoft.com/ubuntu/26.04/prod resolute InRelease [3964 B]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.6866299Z Hit:2 http://azure.archive.ubuntu.com/ubuntu resolute InRelease
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.6892921Z Get:3 http://azure.archive.ubuntu.com/ubuntu resolute-updates InRelease [137 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.6940186Z Get:4 http://azure.archive.ubuntu.com/ubuntu resolute-backports InRelease [137 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.6977711Z Get:5 http://azure.archive.ubuntu.com/ubuntu resolute-security InRelease [137 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.7022392Z Get:7 https://packages.microsoft.com/ubuntu/26.04/prod resolute/main amd64 Packages [165 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.7252394Z Get:8 https://packages.microsoft.com/ubuntu/26.04/prod resolute/main arm64 Packages [151 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.7390750Z Get:9 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 Packages [901 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.7541249Z Get:10 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main Translation-en [200 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.7543446Z Get:11 http://azure.archive.ubuntu.com/ubuntu resolute-updates/universe amd64v3 Packages [394 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.7599226Z Get:12 http://azure.archive.ubuntu.com/ubuntu resolute-updates/universe Translation-en [124 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.7658797Z Get:13 http://azure.archive.ubuntu.com/ubuntu resolute-updates/restricted amd64v3 Packages [629 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.7689497Z Get:14 http://azure.archive.ubuntu.com/ubuntu resolute-updates/restricted Translation-en [130 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.7762763Z Get:15 http://azure.archive.ubuntu.com/ubuntu resolute-security/main amd64v3 Packages [721 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.7802705Z Get:16 http://azure.archive.ubuntu.com/ubuntu resolute-security/main Translation-en [158 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.7822278Z Get:17 http://azure.archive.ubuntu.com/ubuntu resolute-security/universe amd64v3 Packages [222 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.7865798Z Get:18 http://azure.archive.ubuntu.com/ubuntu resolute-security/universe Translation-en [72.7 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.8308817Z Get:19 http://azure.archive.ubuntu.com/ubuntu resolute-security/restricted amd64v3 Packages [590 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:20.8344771Z Get:20 http://azure.archive.ubuntu.com/ubuntu resolute-security/restricted Translation-en [122 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:23.2016070Z Fetched 4995 kB in 0s (10.6 MB/s)
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:23.9283809Z Reading package lists...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:23.9568149Z Reading package lists...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1511179Z Building dependency tree...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1518852Z Reading state information...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1733409Z Skipping ca-certificates, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1734727Z Skipping debianutils, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1735736Z debianutils set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1736720Z Skipping ibverbs-providers, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1737599Z ibverbs-providers set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1738023Z Skipping libasound2t64, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1738941Z libasound2t64 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1739320Z Skipping libatk1.0-0t64, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1739708Z libatk1.0-0t64 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1740138Z Skipping libatk-bridge2.0-0t64, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1740619Z libatk-bridge2.0-0t64 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1741012Z Skipping libatomic1, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1741398Z libatomic1 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1741766Z Skipping libatspi2.0-0t64, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1742164Z libatspi2.0-0t64 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1742524Z Skipping libc6, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1742948Z Skipping libcap2, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1743321Z libcap2 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1743670Z Skipping libcrypt1, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1744034Z libcrypt1 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1744392Z Skipping libcups2t64, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1744773Z libcups2t64 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1745142Z Skipping libfontconfig1, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1745543Z libfontconfig1 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1745993Z Skipping libfribidi0, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1746441Z libfribidi0 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1746784Z Skipping libgbm1, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1747137Z libgbm1 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1747686Z Skipping libgl1, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1748042Z libgl1 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1748400Z Skipping libglib2.0-0t64, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1748799Z libglib2.0-0t64 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1749146Z Skipping libglx0, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1749497Z libglx0 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1749875Z Skipping libgstreamer1.0-0, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1750289Z libgstreamer1.0-0 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1750665Z Skipping libibverbs1, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1751038Z libibverbs1 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1751378Z Skipping libice6, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1751727Z libice6 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1752057Z Skipping libnspr4, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1752418Z libnspr4 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1752979Z Skipping libnss3, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1753324Z libnss3 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1753645Z Skipping libnuma1, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1753991Z libnuma1 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1754314Z Skipping libpam0g, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1754658Z libpam0g set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1755008Z Skipping libpixman-1-0, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1755397Z libpixman-1-0 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1755759Z Skipping libpython3.14, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1756129Z libpython3.14 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1756499Z Skipping libtirpc3t64, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1756902Z libtirpc3t64 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1757375Z Skipping libudev1, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1757905Z libudev1 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1758254Z Skipping libuuid1, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1758611Z libuuid1 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1758979Z Skipping libxcomposite1, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1759390Z libxcomposite1 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1759769Z Skipping libxdamage1, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1760146Z libxdamage1 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1760545Z Skipping libxfixes3, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1760991Z libxfixes3 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1761337Z Skipping libxfont2, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1761702Z libxfont2 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1762041Z Skipping libxft2, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1762410Z libxft2 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1762760Z Skipping libxinerama1, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1763148Z libxinerama1 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1763506Z Skipping libxrandr2, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1763874Z libxrandr2 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1764215Z Skipping libxt6t64, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1764576Z libxt6t64 set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1922048Z Skipping libxtst6, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1922841Z Skipping locales, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1923521Z Skipping make, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1924128Z Skipping net-tools, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1924762Z Skipping procps, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1925373Z procps set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1925904Z Skipping sudo, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1926568Z Skipping unzip, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1927233Z Skipping wget, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1928100Z Skipping x11-xkb-utils, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1928710Z x11-xkb-utils set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1929285Z Skipping xkb-data, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1929854Z xkb-data set to manually installed.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.1930388Z Skipping zlib1g, it is already installed and upgrade is not set.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.2628742Z Solving dependencies...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.3644168Z The following additional packages will be installed:
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.3645038Z   libamd-comgr3 libamdhip64-7 libboost-chrono1.90.0 libboost-filesystem1.90.0
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.3646559Z   libboost-serialization1.90.0 libboost-thread1.90.0 libc-bin libflac14
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.3647491Z   libhsa-runtime64-1 libhsakmt1 libibmad5 libibumad3 libmp3lame0
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.3652608Z   libmpg123-0t64 libopus0 liborc-0.4-0t64 libvorbisenc2
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.3660088Z Suggested packages:
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.3660486Z   libvisual-0.4-plugins opus-tools uhd-host
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.3660932Z Recommended packages:
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.3661256Z   gstreamer1.0-plugins-base
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.3969424Z The following NEW packages will be installed:
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.3970210Z   libamd-comgr3 libamdhip64-7 libboost-chrono1.90.0 libboost-filesystem1.90.0
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.3970982Z   libboost-serialization1.90.0 libboost-thread1.90.0 libflac14
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.3971846Z   libgstreamer-plugins-base1.0-0 libhidapi-libusb0 libhsa-runtime64-1
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.3972525Z   libhsakmt1 libibmad5 libibumad3 libmosquitto1 libmosquittopp1 libmp3lame0
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.3973984Z   libmpg123-0t64 libopengl0 libopus0 liborc-0.4-0t64 libpsm2-2 librdmacm1t64
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.3977119Z   libsndfile1 libucx0 libuhd4.9.0 libvorbisenc2 locales-all
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.3982767Z The following packages will be upgraded:
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.3989721Z   libc-bin locales
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.4233007Z 2 upgraded, 27 newly installed, 0 to remove and 37 not upgraded.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.4233676Z Need to get 55.0 MB of archives.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.4234210Z After this operation, 372 MB of additional disk space will be used.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.4234865Z Get:1 file:/etc/apt/apt-mirrors.txt Mirrorlist [144 B]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.4724180Z Get:2 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libc-bin amd64 2.43-2ubuntu2.7 [716 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:24.6088873Z Get:3 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 locales all 2.43-2ubuntu2.7 [4226 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:25.4815456Z Get:4 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libamd-comgr3 amd64 7.1.1+dfsg-0ubuntu1 [15.3 MB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:26.3523631Z Get:5 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libhsakmt1 amd64 7.1.0+dfsg-0ubuntu9 [78.3 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:26.3759867Z Get:6 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libhsa-runtime64-1 amd64 7.1.0+dfsg-0ubuntu9 [604 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:26.4283415Z Get:7 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libamdhip64-7 amd64 7.1.0-0ubuntu2 [11.1 MB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:27.0539209Z Get:8 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libboost-chrono1.90.0 amd64 1.90.0-6ubuntu1 [238 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:27.0870613Z Get:9 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libboost-filesystem1.90.0 amd64 1.90.0-6ubuntu1 [286 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:27.1229854Z Get:10 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libboost-serialization1.90.0 amd64 1.90.0-6ubuntu1 [338 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:27.1550165Z Get:11 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libboost-thread1.90.0 amd64 1.90.0-6ubuntu1 [265 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:27.1819667Z Get:12 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libflac14 amd64 1.5.0+ds-5 [172 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:27.2128121Z Get:13 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 liborc-0.4-0t64 amd64 1:0.4.42-2 [285 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:27.2370448Z Get:14 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libgstreamer-plugins-base1.0-0 amd64 1.28.2-1ubuntu0.3 [926 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:27.2866739Z Get:15 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libmosquitto1 amd64 2.0.22-5build1 [55.7 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:27.3174606Z Get:16 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libmosquittopp1 amd64 2.0.22-5build1 [14.2 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:27.3391524Z Get:17 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libmpg123-0t64 amd64 1.33.3-2 [180 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:27.3627856Z Get:18 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 libmp3lame0 amd64 3.101~svn6525+dfsg-2ubuntu0.1 [123 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:27.3856543Z Get:19 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libopus0 amd64 1.6.1-1 [3557 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:27.6063885Z Get:20 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libpsm2-2 amd64 11.2.185-2.1build1 [195 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:27.6312475Z Get:21 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 librdmacm1t64 amd64 61.0-2ubuntu3 [75.5 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:27.6547781Z Get:22 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libvorbisenc2 amd64 1.3.7-3build2 [79.9 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:27.6780911Z Get:23 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libsndfile1 amd64 1.2.2-4 [229 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:27.7044610Z Get:24 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libibumad3 amd64 61.0-2ubuntu3 [31.9 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:27.7271238Z Get:25 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libibmad5 amd64 61.0-2ubuntu3 [44.3 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:27.7543376Z Get:26 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libucx0 amd64 1.20.0+ds-4ubuntu2 [958 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:27.9605304Z Get:27 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libuhd4.9.0 amd64 4.9.0.1-1ubuntu1 [3721 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:28.7354386Z Get:28 http://azure.archive.ubuntu.com/ubuntu resolute/universe amd64v3 libhidapi-libusb0 amd64 0.15.0-2 [19.2 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:28.7618218Z Get:29 http://azure.archive.ubuntu.com/ubuntu resolute/main amd64v3 libopengl0 amd64 1.7.0-3 [32.8 kB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:28.7857841Z Get:30 http://azure.archive.ubuntu.com/ubuntu resolute-updates/main amd64v3 locales-all amd64 2.43-2ubuntu2.7 [11.1 MB]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:29.6927558Z Preconfiguring packages ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:29.7929932Z Fetched 55.0 MB in 5s (11.0 MB/s)
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:29.8450970Z (Reading database ... 
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:29.8451530Z (Reading database ... 5%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:29.8451898Z (Reading database ... 10%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:29.8452239Z (Reading database ... 15%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:29.8452469Z (Reading database ... 20%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:29.8452691Z (Reading database ... 25%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:29.8452925Z (Reading database ... 30%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:29.8453169Z (Reading database ... 35%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:29.8453517Z (Reading database ... 40%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:29.8453790Z (Reading database ... 45%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:29.8454079Z (Reading database ... 50%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:29.9142715Z (Reading database ... 55%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:30.1129271Z (Reading database ... 60%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:30.2547963Z (Reading database ... 65%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:30.4149702Z (Reading database ... 70%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:30.6010062Z (Reading database ... 75%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:30.7596530Z (Reading database ... 80%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:30.9619635Z (Reading database ... 85%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.1656848Z (Reading database ... 90%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.3468412Z (Reading database ... 95%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.3468944Z (Reading database ... 100%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.3469509Z (Reading database ... 213946 files and directories currently installed.)
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.3520948Z Preparing to unpack .../libc-bin_2.43-2ubuntu2.7_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.3562439Z Unpacking libc-bin (2.43-2ubuntu2.7) over (2.43-2ubuntu2.4) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.4324836Z Setting up libc-bin (2.43-2ubuntu2.7) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5015475Z (Reading database ... 
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5015964Z (Reading database ... 5%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5016296Z (Reading database ... 10%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5016545Z (Reading database ... 15%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5016781Z (Reading database ... 20%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5017009Z (Reading database ... 25%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5017238Z (Reading database ... 30%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5017709Z (Reading database ... 35%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5017955Z (Reading database ... 40%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5018192Z (Reading database ... 45%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5018428Z (Reading database ... 50%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5167588Z (Reading database ... 55%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5198243Z (Reading database ... 60%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5241900Z (Reading database ... 65%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5263352Z (Reading database ... 70%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5286968Z (Reading database ... 75%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5339481Z (Reading database ... 80%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5523203Z (Reading database ... 85%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5562938Z (Reading database ... 90%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5895748Z (Reading database ... 95%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5896255Z (Reading database ... 100%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5896792Z (Reading database ... 213946 files and directories currently installed.)
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.5946911Z Preparing to unpack .../00-locales_2.43-2ubuntu2.7_all.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.6208195Z Unpacking locales (2.43-2ubuntu2.7) over (2.43-2ubuntu2.4) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.8569405Z Selecting previously unselected package libamd-comgr3:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.8726264Z Preparing to unpack .../01-libamd-comgr3_7.1.1+dfsg-0ubuntu1_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:31.8740339Z Unpacking libamd-comgr3:amd64 (7.1.1+dfsg-0ubuntu1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.1085277Z Selecting previously unselected package libhsakmt1:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.1234975Z Preparing to unpack .../02-libhsakmt1_7.1.0+dfsg-0ubuntu9_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.1242329Z Unpacking libhsakmt1:amd64 (7.1.0+dfsg-0ubuntu9) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.1489481Z Selecting previously unselected package libhsa-runtime64-1:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.1637199Z Preparing to unpack .../03-libhsa-runtime64-1_7.1.0+dfsg-0ubuntu9_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.1644987Z Unpacking libhsa-runtime64-1:amd64 (7.1.0+dfsg-0ubuntu9) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.2017159Z Selecting previously unselected package libamdhip64-7:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.2166382Z Preparing to unpack .../04-libamdhip64-7_7.1.0-0ubuntu2_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.2173131Z Unpacking libamdhip64-7:amd64 (7.1.0-0ubuntu2) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.3486020Z Selecting previously unselected package libboost-chrono1.90.0:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.3634218Z Preparing to unpack .../05-libboost-chrono1.90.0_1.90.0-6ubuntu1_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.3641799Z Unpacking libboost-chrono1.90.0:amd64 (1.90.0-6ubuntu1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.3946955Z Selecting previously unselected package libboost-filesystem1.90.0:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.4097063Z Preparing to unpack .../06-libboost-filesystem1.90.0_1.90.0-6ubuntu1_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.4102805Z Unpacking libboost-filesystem1.90.0:amd64 (1.90.0-6ubuntu1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.4412958Z Selecting previously unselected package libboost-serialization1.90.0:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.4562732Z Preparing to unpack .../07-libboost-serialization1.90.0_1.90.0-6ubuntu1_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.4570946Z Unpacking libboost-serialization1.90.0:amd64 (1.90.0-6ubuntu1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.4903482Z Selecting previously unselected package libboost-thread1.90.0:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.5052054Z Preparing to unpack .../08-libboost-thread1.90.0_1.90.0-6ubuntu1_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.5059951Z Unpacking libboost-thread1.90.0:amd64 (1.90.0-6ubuntu1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.5367054Z Selecting previously unselected package libflac14:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.5516946Z Preparing to unpack .../09-libflac14_1.5.0+ds-5_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.5523852Z Unpacking libflac14:amd64 (1.5.0+ds-5) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.5787755Z Selecting previously unselected package liborc-0.4-0t64:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.5936880Z Preparing to unpack .../10-liborc-0.4-0t64_1%3a0.4.42-2_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.5944144Z Unpacking liborc-0.4-0t64:amd64 (1:0.4.42-2) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.6238325Z Selecting previously unselected package libgstreamer-plugins-base1.0-0:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.6388280Z Preparing to unpack .../11-libgstreamer-plugins-base1.0-0_1.28.2-1ubuntu0.3_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.6396004Z Unpacking libgstreamer-plugins-base1.0-0:amd64 (1.28.2-1ubuntu0.3) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.6790874Z Selecting previously unselected package libmosquitto1:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.6942195Z Preparing to unpack .../12-libmosquitto1_2.0.22-5build1_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.6950366Z Unpacking libmosquitto1:amd64 (2.0.22-5build1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.7203762Z Selecting previously unselected package libmosquittopp1:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.7353430Z Preparing to unpack .../13-libmosquittopp1_2.0.22-5build1_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.7360905Z Unpacking libmosquittopp1:amd64 (2.0.22-5build1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.7597221Z Selecting previously unselected package libmpg123-0t64:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.7748098Z Preparing to unpack .../14-libmpg123-0t64_1.33.3-2_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.7754330Z Unpacking libmpg123-0t64:amd64 (1.33.3-2) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.8024317Z Selecting previously unselected package libmp3lame0:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.8173637Z Preparing to unpack .../15-libmp3lame0_3.101~svn6525+dfsg-2ubuntu0.1_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.8179879Z Unpacking libmp3lame0:amd64 (3.101~svn6525+dfsg-2ubuntu0.1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.8429510Z Selecting previously unselected package libopus0:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.8579174Z Preparing to unpack .../16-libopus0_1.6.1-1_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.8585892Z Unpacking libopus0:amd64 (1.6.1-1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.9000006Z Selecting previously unselected package libpsm2-2.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.9149583Z Preparing to unpack .../17-libpsm2-2_11.2.185-2.1build1_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.9156699Z Unpacking libpsm2-2 (11.2.185-2.1build1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.9418795Z Selecting previously unselected package librdmacm1t64:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.9572743Z Preparing to unpack .../18-librdmacm1t64_61.0-2ubuntu3_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.9579560Z Unpacking librdmacm1t64:amd64 (61.0-2ubuntu3) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.9849793Z Selecting previously unselected package libvorbisenc2:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:32.9999017Z Preparing to unpack .../19-libvorbisenc2_1.3.7-3build2_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.0006695Z Unpacking libvorbisenc2:amd64 (1.3.7-3build2) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.0269469Z Selecting previously unselected package libsndfile1:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.0420146Z Preparing to unpack .../20-libsndfile1_1.2.2-4_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.0427484Z Unpacking libsndfile1:amd64 (1.2.2-4) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.0701489Z Selecting previously unselected package libibumad3:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.0849969Z Preparing to unpack .../21-libibumad3_61.0-2ubuntu3_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.0857590Z Unpacking libibumad3:amd64 (61.0-2ubuntu3) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.1107063Z Selecting previously unselected package libibmad5:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.1256191Z Preparing to unpack .../22-libibmad5_61.0-2ubuntu3_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.1263948Z Unpacking libibmad5:amd64 (61.0-2ubuntu3) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.1508498Z Selecting previously unselected package libucx0:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.1658293Z Preparing to unpack .../23-libucx0_1.20.0+ds-4ubuntu2_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.1665278Z Unpacking libucx0:amd64 (1.20.0+ds-4ubuntu2) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.2044307Z Selecting previously unselected package libuhd4.9.0:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.2195719Z Preparing to unpack .../24-libuhd4.9.0_4.9.0.1-1ubuntu1_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.2203460Z Unpacking libuhd4.9.0:amd64 (4.9.0.1-1ubuntu1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.2983696Z Selecting previously unselected package libhidapi-libusb0:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.3134754Z Preparing to unpack .../25-libhidapi-libusb0_0.15.0-2_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.3142099Z Unpacking libhidapi-libusb0:amd64 (0.15.0-2) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.3392179Z Selecting previously unselected package libopengl0:amd64.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.3541633Z Preparing to unpack .../26-libopengl0_1.7.0-3_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.3549563Z Unpacking libopengl0:amd64 (1.7.0-3) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.3828632Z Selecting previously unselected package locales-all.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.3976566Z Preparing to unpack .../27-locales-all_2.43-2ubuntu2.7_amd64v3.deb ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:33.3985141Z Unpacking locales-all (2.43-2ubuntu2.7) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:34.7451914Z Setting up libboost-chrono1.90.0:amd64 (1.90.0-6ubuntu1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:34.7473360Z Setting up libmosquitto1:amd64 (2.0.22-5build1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:34.7490818Z Setting up libibumad3:amd64 (61.0-2ubuntu3) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:34.7506673Z Setting up libibmad5:amd64 (61.0-2ubuntu3) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:34.7525361Z Setting up libmosquittopp1:amd64 (2.0.22-5build1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:34.7542805Z Setting up libmpg123-0t64:amd64 (1.33.3-2) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:34.7559943Z Setting up locales (2.43-2ubuntu2.7) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3210768Z locales-all installed, skipping locales generation
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3483785Z Setting up libboost-thread1.90.0:amd64 (1.90.0-6ubuntu1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3500471Z Setting up locales-all (2.43-2ubuntu2.7) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3539646Z Setting up libopengl0:amd64 (1.7.0-3) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3560131Z Setting up liborc-0.4-0t64:amd64 (1:0.4.42-2) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3578893Z Setting up libopus0:amd64 (1.6.1-1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3595428Z Setting up libhidapi-libusb0:amd64 (0.15.0-2) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3612146Z Setting up libflac14:amd64 (1.5.0+ds-5) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3629111Z Setting up libamd-comgr3:amd64 (7.1.1+dfsg-0ubuntu1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3646113Z Setting up libpsm2-2 (11.2.185-2.1build1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3665731Z Setting up librdmacm1t64:amd64 (61.0-2ubuntu3) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3683577Z Setting up libboost-serialization1.90.0:amd64 (1.90.0-6ubuntu1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3699968Z Setting up libboost-filesystem1.90.0:amd64 (1.90.0-6ubuntu1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3717677Z Setting up libuhd4.9.0:amd64 (4.9.0.1-1ubuntu1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3735979Z Setting up libhsakmt1:amd64 (7.1.0+dfsg-0ubuntu9) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3756101Z Setting up libmp3lame0:amd64 (3.101~svn6525+dfsg-2ubuntu0.1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3772448Z Setting up libvorbisenc2:amd64 (1.3.7-3build2) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3790021Z Setting up libgstreamer-plugins-base1.0-0:amd64 (1.28.2-1ubuntu0.3) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3806663Z Setting up libhsa-runtime64-1:amd64 (7.1.0+dfsg-0ubuntu9) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3823892Z Setting up libsndfile1:amd64 (1.2.2-4) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3840775Z Setting up libamdhip64-7:amd64 (7.1.0-0ubuntu2) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3857648Z Setting up libucx0:amd64 (1.20.0+ds-4ubuntu2) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3881675Z Processing triggers for man-db (2.13.1-1build1) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3908006Z Not building database; man-db/auto-update is not 'true'.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:35.3922967Z Processing triggers for libc-bin (2.43-2ubuntu2.7) ...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:36.0479749Z 
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:36.0480457Z Running kernel seems to be up-to-date.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:36.0480733Z 
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:36.0480920Z Restarting services...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:36.0587511Z 
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:36.0588172Z Service restarts being deferred:
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:36.0590464Z  systemctl restart hosted-compute-agent.service
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:36.0590866Z 
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:36.0592356Z No containers need to be restarted.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:36.0592611Z 
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:36.0592896Z No user sessions are running outdated binaries.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:36.0593299Z 
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:36.0593689Z No VM guests are running outdated hypervisor (qemu) binaries on this host.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:37.1876249Z ##[endgroup]
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:37.1877147Z ##[group]Setting up MATLAB
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:38.8204400Z [command]/usr/bin/chmod +x /home/runner/work/_temp/mpm
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:40.9623877Z Installing with the following parameters:
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:40.9624596Z --destination=/opt/hostedtoolcache/MATLAB/2026.2.999/x64
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:40.9625144Z --release=R2026b
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:40.9625480Z --products=MATLAB
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:40.9625850Z ---------------------------------------------
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:45.1748955Z The following MathWorks Products are licensed under The MathWorks, Inc. Software License Agreement,
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:45.1749789Z available in the installation of the MathWorks Product or in the virtual machine image.
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:45.1750209Z MATLAB
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:45.1750324Z 
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:45.1750821Z Starting install
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:45.1764501Z Products will be installed to: /opt/hostedtoolcache/MATLAB/2026.2.999/x64
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:46.3186772Z 
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:46.7534354Z Installing... 3%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:47.2680320Z Installing... 5%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:47.7635316Z Installing... 7%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:48.3060430Z Installing... 9%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:48.6713733Z Installing... 11%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:49.7732530Z Installing... 13%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:50.9034471Z Installing... 15%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:51.4879522Z Installing... 17%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:52.9987756Z Installing... 26%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:53.9553218Z Installing... 28%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:54.2394029Z Installing... 30%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:55.1408642Z Installing... 32%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:57.1247091Z Installing... 34%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:57.8234245Z Installing... 36%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:59.3096551Z Installing... 38%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:12:59.6553730Z Installing... 40%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:00.4746343Z Installing... 42%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:01.2131058Z Installing... 44%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:03.3127727Z Installing... 46%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:04.7194709Z Installing... 48%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:05.9151895Z Installing... 50%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:07.5368480Z Installing... 52%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:08.1823689Z Installing... 54%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:08.8350217Z Installing... 56%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:10.7751866Z Installing... 58%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:11.5043549Z Installing... 60%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:11.7816404Z Installing... 62%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:14.4063022Z Installing... 64%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:15.4913765Z Installing... 66%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:16.7265886Z Installing... 68%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:18.9138121Z Installing... 70%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:19.9960446Z Installing... 72%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:20.7658249Z Installing... 74%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:21.5149746Z Installing... 76%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:22.4217875Z Installing... 87%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:24.1013405Z Installing... 89%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:25.1678731Z Installing... 91%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:26.1164305Z Installing... 93%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:27.1570734Z Installing... 95%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:28.7299780Z Installing... 97%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:29.1574810Z Installing... 99%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:29.2176049Z Installing... 100%
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:29.2176506Z Completing setup...
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:30.7493579Z Installation complete
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:32.8737071Z [command]/usr/bin/chmod +x /opt/hostedtoolcache/matlab-batch/v1/x64/matlab-batch
+unisci	Run matlab-actions/setup-matlab@v2	2026-11-19T21:13:32.8804228Z ##[endgroup]
+unisci	Run matlab-actions/run-command@v2	´╗┐2026-11-19T21:13:32.9007842Z ##[group]Run matlab-actions/run-command@v2
+unisci	Run matlab-actions/run-command@v2	2026-11-19T21:13:32.9008181Z with:
+unisci	Run matlab-actions/run-command@v2	2026-11-19T21:13:32.9008403Z   command: merge_shards(4, 4)
+unisci	Run matlab-actions/run-command@v2	2026-11-19T21:13:32.9008652Z ##[endgroup]
+unisci	Run matlab-actions/run-command@v2	2026-11-19T21:13:32.9819875Z [command]/home/runner/work/_actions/matlab-actions/run-command/v2/dist/bin/glnxa64/run-matlab-command setenv('MW_ORIG_WORKING_FOLDER',cd('/tmp/run_matlab_command-6gDxM9')); command_92a5bcfd_c398_4adc_9133_2aef82807677 
+unisci	Run matlab-actions/run-command@v2	2026-11-19T21:13:37.0241503Z [^HWarning: Unable to locate a personal folder for $documents/MATLAB.]^H 
+unisci	Run matlab-actions/run-command@v2	2026-11-19T21:13:37.4830815Z {^HError using assert
+unisci	Run matlab-actions/run-command@v2	2026-11-19T21:13:37.4831223Z 16 celle mancanti (prima: 1)
+unisci	Run matlab-actions/run-command@v2	2026-11-19T21:13:37.4831519Z 
+unisci	Run matlab-actions/run-command@v2	2026-11-19T21:13:37.4831621Z Error in merge_shards (line 14)
+unisci	Run matlab-actions/run-command@v2	2026-11-19T21:13:37.4832053Z     assert(isempty(mancanti), '%d celle mancanti (prima: %d)', numel(mancanti), mancanti(1));
+unisci	Run matlab-actions/run-command@v2	2026-11-19T21:13:37.4832547Z     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+unisci	Run matlab-actions/run-command@v2	2026-11-19T21:13:37.4832955Z Error in command_92a5bcfd_c398_4adc_9133_2aef82807677 (line 1)
+unisci	Run matlab-actions/run-command@v2	2026-11-19T21:13:37.4833689Z cd(getenv('MW_ORIG_WORKING_FOLDER')); addpath('/home/runner/work/_actions/matlab-actions/run-command/v2/dist/plugins'); merge_shards(4, 4)
+unisci	Run matlab-actions/run-command@v2	2026-11-19T21:13:37.4834354Z                                                                                                                         ^^^^^^^^^^^^^^^^^^
+unisci	Run matlab-actions/run-command@v2	2026-11-19T21:13:37.4834730Z }^H 
+unisci	Run matlab-actions/run-command@v2	2026-11-19T21:13:37.7829931Z exit status 1
+unisci	Run matlab-actions/run-command@v2	2026-11-19T21:13:37.7889580Z ##[error]Error: The process '/home/runner/work/_actions/matlab-actions/run-command/v2/dist/bin/glnxa64/run-matlab-command' failed with exit code 1
+unisci	Post Run matlab-actions/setup-matlab@v2	´╗┐2026-11-19T21:13:37.8036442Z Post job cleanup.
+unisci	Post Run actions/checkout@v4	´╗┐2026-11-19T21:13:37.9480082Z Post job cleanup.
+unisci	Post Run actions/checkout@v4	2026-11-19T21:13:38.0379407Z [command]/usr/bin/git version
+unisci	Post Run actions/checkout@v4	2026-11-19T21:13:38.0425201Z git version 2.56.1
+unisci	Post Run actions/checkout@v4	2026-11-19T21:13:38.0472225Z Temporarily overriding HOME='/home/runner/work/_temp/6f3ee6b7-8cdf-42fd-98aa-8278b1ed314f' before making global git config changes
+unisci	Post Run actions/checkout@v4	2026-11-19T21:13:38.0473843Z Adding repository directory to the temporary git global config as a safe directory
+unisci	Post Run actions/checkout@v4	2026-11-19T21:13:38.0479373Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/luigi2-griglia/luigi2-griglia
+unisci	Post Run actions/checkout@v4	2026-11-19T21:13:38.0535039Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+unisci	Post Run actions/checkout@v4	2026-11-19T21:13:38.0585474Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+unisci	Post Run actions/checkout@v4	2026-11-19T21:13:38.0963981Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+unisci	Post Run actions/checkout@v4	2026-11-19T21:13:38.1004884Z http.https://github.com/.extraheader
+unisci	Post Run actions/checkout@v4	2026-11-19T21:13:38.1016245Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+unisci	Post Run actions/checkout@v4	2026-11-19T21:13:38.1082234Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+unisci	Post Run actions/checkout@v4	2026-11-19T21:13:38.1447920Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+unisci	Post Run actions/checkout@v4	2026-11-19T21:13:38.1491287Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+unisci	Complete job	´╗┐2026-11-19T21:13:38.1981319Z Cleaning up orphan processes
+unisci	Complete job	2026-11-19T21:13:38.2431518Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/download-artifact@v4, matlab-actions/run-command@v2, matlab-actions/setup-matlab@v2. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

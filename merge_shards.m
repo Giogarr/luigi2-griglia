@@ -11,7 +11,9 @@ function merge_shards(NI, NJ)
         SIv(S.idx) = S.SIv;  cnt(S.idx) = cnt(S.idx) + 1;  t_tot = t_tot + S.el;
     end
     mancanti = find(cnt == 0);
-    assert(isempty(mancanti), '%d celle mancanti (prima: %d)', numel(mancanti), mancanti(1));
+    if ~isempty(mancanti)
+        error('%d celle mancanti (prima: %d)', numel(mancanti), mancanti(1));
+    end
     assert(all(cnt == 1), 'celle calcolate più volte');
     assert(all(SIv == 0 | SIv == 1), 'valori diversi da 0/1');
     M  = reshape(SIv, NI, NJ);
