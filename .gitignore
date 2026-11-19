@@ -1,0 +1,5 @@
+log*.txt
+esito.json
+M_*.mat
+M_*.csv
+shard_*.mat
