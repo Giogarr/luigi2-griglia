@@ -9,6 +9,9 @@ on:
       NJ:
         description: "colonne (jL -> a)"
         default: "200"
+      OMEGA:
+        description: "omega_base (originale 3.13)"
+        default: "3.13"
       K:
         description: "numero di fette (job), max 256"
         default: "200"
@@ -24,7 +27,7 @@ jobs:
           products: Parallel_Computing_Toolbox
       - uses: matlab-actions/run-command@v2
         with:
-          command: verifica_ci
+          command: verifica_ci(${{ inputs.OMEGA }})
 
   prepara:
     needs: verifica
@@ -52,7 +55,7 @@ jobs:
           cache: true
       - uses: matlab-actions/run-command@v2
         with:
-          command: run_shard(${{ matrix.k }}, ${{ inputs.K }}, ${{ inputs.NI }}, ${{ inputs.NJ }})
+          command: run_shard(${{ matrix.k }}, ${{ inputs.K }}, ${{ inputs.NI }}, ${{ inputs.NJ }}, ${{ inputs.OMEGA }})
       - uses: actions/upload-artifact@v4
         with:
           name: shard-${{ matrix.k }}
@@ -73,10 +76,10 @@ jobs:
       - uses: matlab-actions/setup-matlab@v2
       - uses: matlab-actions/run-command@v2
         with:
-          command: merge_shards(${{ inputs.NI }}, ${{ inputs.NJ }})
+          command: merge_shards(${{ inputs.NI }}, ${{ inputs.NJ }}, ${{ inputs.OMEGA }})
       - uses: actions/upload-artifact@v4
         with:
-          name: M_${{ inputs.NI }}x${{ inputs.NJ }}
+          name: M_${{ inputs.NI }}x${{ inputs.NJ }}_w${{ inputs.OMEGA }}
           path: |
             M_*.mat
             M_*.csv

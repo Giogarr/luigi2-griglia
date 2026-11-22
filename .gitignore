@@ -3,3 +3,6 @@ esito.json
 M_*.mat
 M_*.csv
 shard_*.mat
+figure/
+*.zip
+Luigi2_rif.m
