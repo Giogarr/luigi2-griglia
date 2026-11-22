@@ -7,5 +7,8 @@ do {
 } while ($st -ne "completed")
 gh run view $RUN --log | Out-File -Encoding utf8 "log_w$OMEGA.txt"; Copy-Item "log_w$OMEGA.txt" log.txt
 gh run view $RUN --json conclusion,jobs | Out-File -Encoding utf8 esito.json
-gh run download $RUN -n "M_${NI}x${NJ}_w${OMEGA}" -D . 2>$null
+$tmp = Join-Path $env:TEMP ("luigi2_" + [guid]::NewGuid())
+gh run download $RUN -n "M_${NI}x${NJ}_w${OMEGA}" -D $tmp
+Get-ChildItem $tmp -Filter "M_${NI}x${NJ}_w*" | Copy-Item -Destination . -Force
+Get-ChildItem . -Filter "M_${NI}x${NJ}_w*" | Format-Table Name, Length, LastWriteTime
 Write-Host "FINE run $RUN - log in log.txt"

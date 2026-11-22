@@ -81,6 +81,6 @@ jobs:
         with:
           name: M_${{ inputs.NI }}x${{ inputs.NJ }}_w${{ inputs.OMEGA }}
           path: |
-            M_*.mat
-            M_*.csv
+            M_${{ inputs.NI }}x${{ inputs.NJ }}_w*.mat
+            M_${{ inputs.NI }}x${{ inputs.NJ }}_w*.csv
           retention-days: 90
