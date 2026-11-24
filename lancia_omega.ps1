@@ -3,7 +3,8 @@
 # Uso (PowerShell in C:\luigi2-griglia):
 #   powershell -ExecutionPolicy Bypass -File .\lancia_omega.ps1                  (default 3.5 3.8 2.8)
 #   powershell -ExecutionPolicy Bypass -File .\lancia_omega.ps1 -Omega 3.5,3.8   (altri valori)
-param([string[]]$Omega = @("3.5", "3.8", "2.8"), [int]$N = 200, [int]$K = 100)
+param([string[]]$Omega = @("3.5", "3.8", "2.8"), [int]$N = 200, [int]$K = 100, [switch]$Recupera)
+# -Recupera: non lancia nulla, riprende i run salvati in runs_omega.json (es. dopo PC spento/sospeso)
 $ErrorActionPreference = "Continue"
 Set-Location $PSScriptRoot
 function Tag($w) { $w.Replace(".", "p") }   # 3.5 -> 3p5 (come num2str in merge_shards)
@@ -12,6 +13,11 @@ function Tag($w) { $w.Replace(".", "p") }   # 3.5 -> 3p5 (come num2str in merge_
 foreach ($c in "git", "gh") { if (-not (Get-Command $c -ErrorAction SilentlyContinue)) { throw "manca $c" } }
 gh auth status 2>$null | Out-Null; if ($LASTEXITCODE -ne 0) { throw "esegui prima: gh auth login" }
 
+if ($Recupera) {
+  $j = Get-Content runs_omega.json -Raw | ConvertFrom-Json
+  $N = $j.N; $runs = [ordered]@{}; $j.runs.PSObject.Properties | ForEach-Object { $runs[$_.Name] = $_.Value }
+  Write-Host "recupero run: $($runs.Values -join ', ')"
+} else {
 # 1. pubblica il codice (senza risultati)
 git rm -r --cached -q --ignore-unmatch M_*.mat M_*.csv log*.txt esito*.json | Out-Null
 git add -A; git commit -m "lancio omega $($Omega -join ',')" | Out-Null; git push
@@ -24,6 +30,8 @@ foreach ($w in $Omega) {
   do { Start-Sleep 5; $id = gh run list -w luigi2.yml -L 1 --json databaseId -q ".[0].databaseId" } while ($id -eq $prima)
   $runs[$w] = $id
   Write-Host "omega $w -> run $id  https://github.com/Giogarr/luigi2-griglia/actions/runs/$id"
+}
+@{ N = $N; runs = $runs } | ConvertTo-Json | Out-File -Encoding utf8 runs_omega.json
 }
 
 function Aspetta($ids) {
