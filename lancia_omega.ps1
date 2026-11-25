@@ -2,12 +2,19 @@
 # le fette fallite, scarica le M e prepara uno zip con i soli .mat.
 # Uso (PowerShell in C:\luigi2-griglia):
 #   powershell -ExecutionPolicy Bypass -File .\lancia_omega.ps1                  (default 3.5 3.8 2.8)
-#   powershell -ExecutionPolicy Bypass -File .\lancia_omega.ps1 -Omega 3.5,3.8   (altri valori)
-param([string[]]$Omega = @("3.5", "3.8", "2.8"), [int]$N = 200, [int]$K = 100, [switch]$Recupera)
+#   powershell -ExecutionPolicy Bypass -File .\lancia_omega.ps1 -Omega 2.8,3.5 -LL 1.25,0.8 -N 400 -K 256
+param([string[]]$Omega = @("3.5", "3.8", "2.8"), [string[]]$LL = @(), [int]$N = 200, [int]$K = 100, [switch]$Recupera)
+# -LL: valori di p.ll, uno per ogni omega nello stesso ordine (assente = 1, come l'originale)
 # -Recupera: non lancia nulla, riprende i run salvati in runs_omega.json (es. dopo PC spento/sospeso)
 $ErrorActionPreference = "Continue"
 Set-Location $PSScriptRoot
 function Tag($w) { $w.Replace(".", "p") }   # 3.5 -> 3p5 (come num2str in merge_shards)
+function Nome($w, $pl) { if (-not $pl) { $pl = "1" }; $n = "M_${N}x${N}_w$(Tag $w)"; if ([double]$pl -ne 1) { $n += "_l$(Tag $pl)" }; $n }
+# con -File gli elenchi arrivano come "a,b": li separo qui
+$Omega = @($Omega | ForEach-Object { $_ -split "," } | Where-Object { $_ })
+$LL = @($LL | ForEach-Object { $_ -split "," } | Where-Object { $_ })
+if ($LL.Count -eq 0) { $LL = @($Omega | ForEach-Object { "1" }) }
+if ($LL.Count -ne $Omega.Count) { throw "-LL deve avere un valore per ogni omega" }
 
 # 0. prerequisiti
 foreach ($c in "git", "gh") { if (-not (Get-Command $c -ErrorAction SilentlyContinue)) { throw "manca $c" } }
@@ -24,12 +31,13 @@ git add -A; git commit -m "lancio omega $($Omega -join ',')" | Out-Null; git pus
 
 # 2. avvia un run per ogni omega (girano insieme: GitHub li mette in coda, max 20 job alla volta)
 $runs = [ordered]@{}
-foreach ($w in $Omega) {
+for ($q = 0; $q -lt $Omega.Count; $q++) {
+  $w = $Omega[$q]; $pl = $LL[$q]; $key = "$w|$pl"
   $prima = gh run list -w luigi2.yml -L 1 --json databaseId -q ".[0].databaseId"
-  gh workflow run luigi2.yml -f NI=$N -f NJ=$N -f K=$K -f OMEGA=$w
+  gh workflow run luigi2.yml -f NI=$N -f NJ=$N -f K=$K -f OMEGA=$w -f LL=$pl
   do { Start-Sleep 5; $id = gh run list -w luigi2.yml -L 1 --json databaseId -q ".[0].databaseId" } while ($id -eq $prima)
-  $runs[$w] = $id
-  Write-Host "omega $w -> run $id  https://github.com/Giogarr/luigi2-griglia/actions/runs/$id"
+  $runs[$key] = $id
+  Write-Host "omega $w, ll $pl -> run $id  https://github.com/Giogarr/luigi2-griglia/actions/runs/$id"
 }
 @{ N = $N; runs = $runs } | ConvertTo-Json | Out-File -Encoding utf8 runs_omega.json
 }
@@ -51,20 +59,20 @@ if ($rifare.Count) {
 
 # 4. log, esito e download delle M
 $righe = @()
-foreach ($w in $runs.Keys) {
-  $id = $runs[$w]; $t = Tag $w
-  gh run view $id --log | Out-File -Encoding utf8 "log_w$w.txt"
+foreach ($key in $runs.Keys) {
+  $id = $runs[$key]; $w, $pl = $key.Split("|"); if (-not $pl) { $pl = "1" }; $nm = Nome $w $pl
+  gh run view $id --log | Out-File -Encoding utf8 "log_$nm.txt"
   $concl = gh run view $id --json conclusion -q ".conclusion"
   $tmp = Join-Path $env:TEMP ("luigi2_" + [guid]::NewGuid())
-  gh run download $id -n "M_${N}x${N}_w$w" -D $tmp 2>$null
+  gh run download $id -n "M_${N}x${N}_w${w}_l$pl" -D $tmp 2>$null
   Get-ChildItem $tmp -Filter "M_${N}x${N}_w*" -ErrorAction SilentlyContinue | Copy-Item -Destination . -Force
-  $ok = Test-Path "M_${N}x${N}_w$t.mat"
-  $righe += "omega $w | run $id | $concl | M_${N}x${N}_w$t.mat " + $(if ($ok) { "OK" } else { "MANCANTE" })
+  $ok = Test-Path "$nm.mat"
+  $righe += "omega $w | ll $pl | run $id | $concl | $nm.mat " + $(if ($ok) { "OK" } else { "MANCANTE" })
 }
 
 # 5. zip dei soli .mat
-$mats = @($runs.Keys | ForEach-Object { "M_${N}x${N}_w$(Tag $_).mat" } | Where-Object { Test-Path $_ })
-$zip = "M_${N}x${N}_omega_" + (($runs.Keys | ForEach-Object { Tag $_ }) -join "_") + ".zip"
+$mats = @($runs.Keys | ForEach-Object { $w, $pl = $_.Split("|"); "$(Nome $w $pl).mat" } | Where-Object { Test-Path $_ })
+$zip = "M_${N}x${N}_" + (($runs.Keys | ForEach-Object { $w, $pl = $_.Split("|"); if (-not $pl) { $pl = "1" }; "w$(Tag $w)_l$(Tag $pl)" }) -join "__") + ".zip"
 if ($mats.Count) { Compress-Archive -Path $mats -DestinationPath $zip -Force; $righe += "zip: $zip ($($mats.Count) file .mat)" }
 
 $righe | Out-File -Encoding utf8 riepilogo_omega.txt
