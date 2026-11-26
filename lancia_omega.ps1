@@ -4,24 +4,31 @@
 #   powershell -ExecutionPolicy Bypass -File .\lancia_omega.ps1                  (default 3.5 3.8 2.8)
 #   powershell -ExecutionPolicy Bypass -File .\lancia_omega.ps1 -Omega 2.8,3.5 -LL 1.25,0.8 -N 400 -K 256
 #   powershell -ExecutionPolicy Bypass -File .\lancia_omega.ps1 -Script 3 -Omega 3.13 -N 400 -K 256
-param([string[]]$Omega = @("3.5", "3.8", "2.8"), [string[]]$LL = @(), [int]$N = 200, [int]$K = 100, [ValidateSet("2","3")][string]$Script = "2", [switch]$Recupera)
+#   powershell -ExecutionPolicy Bypass -File .\lancia_omega.ps1 -Script 3 -Omega 2.8,3.5,3.13 -LL 1.25,0.8,1 -C 0.1,0.1,0.05 -N 400 -K 256
+param([string[]]$Omega = @("3.5", "3.8", "2.8"), [string[]]$LL = @(), [string[]]$C = @(), [int]$N = 200, [int]$K = 100, [ValidateSet("2","3")][string]$Script = "2", [switch]$Recupera)
+# -C: valori di p.c (smorzamento), uno per ogni omega (assente = 0.1); solo con -Script 3
 # -Script 2 = Luigi2.m (matrice M) · -Script 3 = Luigi3.m (matrici MD e FMD)
 # -LL: valori di p.ll, uno per ogni omega nello stesso ordine (assente = 1, come l'originale)
 # -Recupera: non lancia nulla, riprende i run salvati in runs_omega.json (es. dopo PC spento/sospeso)
 $ErrorActionPreference = "Continue"
 Set-Location $PSScriptRoot
 function Tag($w) { $w.Replace(".", "p") }   # 3.5 -> 3p5 (come num2str in merge_shards)
-function Nome($w, $pl) { if (-not $pl) { $pl = "1" }; $n = "${P}_${N}x${N}_w$(Tag $w)"; if ([double]$pl -ne 1) { $n += "_l$(Tag $pl)" }; $n }
+function Nome($w, $pl, $pc) { if (-not $pl) { $pl = "1" }; if (-not $pc) { $pc = "0.1" }; $n = "${P}_${N}x${N}_w$(Tag $w)"; if ([double]$pl -ne 1) { $n += "_l$(Tag $pl)" }; if ([double]$pc -ne 0.1) { $n += "_c$(Tag $pc)" }; $n }
+function Artifact($w, $pl, $pc) { if ($Script -eq "3") { "${P}_${N}x${N}_w${w}_l${pl}_c$pc" } else { "${P}_${N}x${N}_w${w}_l$pl" } }
 # con -File gli elenchi arrivano come "a,b": li separo qui
 $Omega = @($Omega | ForEach-Object { $_ -split "," } | Where-Object { $_ })
 $LL = @($LL | ForEach-Object { $_ -split "," } | Where-Object { $_ })
 if ($LL.Count -eq 0) { $LL = @($Omega | ForEach-Object { "1" }) }
 if ($LL.Count -ne $Omega.Count) { throw "-LL deve avere un valore per ogni omega" }
+$C = @($C | ForEach-Object { $_ -split "," } | Where-Object { $_ })
+if ($C.Count -eq 0) { $C = @($Omega | ForEach-Object { "0.1" }) }
+if ($C.Count -ne $Omega.Count) { throw "-C deve avere un valore per ogni omega" }
+if ($Script -eq "2" -and @($C | Where-Object { [double]$_ -ne 0.1 }).Count) { throw "-C e disponibile solo con -Script 3" }
 function Imposta { $script:WF = "luigi$Script.yml"; $script:P = $(if ($Script -eq "3") { "MDFMD" } else { "M" }) }
 Imposta
 
 # 0. prerequisiti
-foreach ($c in "git", "gh") { if (-not (Get-Command $c -ErrorAction SilentlyContinue)) { throw "manca $c" } }
+foreach ($cmd in "git", "gh") { if (-not (Get-Command $cmd -ErrorAction SilentlyContinue)) { throw "manca $cmd" } }
 gh auth status 2>$null | Out-Null; if ($LASTEXITCODE -ne 0) { throw "esegui prima: gh auth login" }
 
 if ($Recupera) {
@@ -37,12 +44,14 @@ git add -A; git commit -m "lancio Luigi$Script omega $($Omega -join ',')" | Out-
 # 2. avvia un run per ogni omega (girano insieme: GitHub li mette in coda, max 20 job alla volta)
 $runs = [ordered]@{}
 for ($q = 0; $q -lt $Omega.Count; $q++) {
-  $w = $Omega[$q]; $pl = $LL[$q]; $key = "$w|$pl"
+  $w = $Omega[$q]; $pl = $LL[$q]; $pc = $C[$q]; $key = "$w|$pl|$pc"
   $prima = gh run list -w $WF -L 1 --json databaseId -q ".[0].databaseId"
-  gh workflow run $WF -f NI=$N -f NJ=$N -f K=$K -f OMEGA=$w -f LL=$pl
+  $ga = @("workflow", "run", $WF, "-f", "NI=$N", "-f", "NJ=$N", "-f", "K=$K", "-f", "OMEGA=$w", "-f", "LL=$pl")
+  if ($Script -eq "3") { $ga += @("-f", "C=$pc") }
+  gh @ga
   do { Start-Sleep 5; $id = gh run list -w $WF -L 1 --json databaseId -q ".[0].databaseId" } while ($id -eq $prima)
   $runs[$key] = $id
-  Write-Host "omega $w, ll $pl -> run $id  https://github.com/Giogarr/luigi2-griglia/actions/runs/$id"
+  Write-Host "omega $w, ll $pl, c $pc -> run $id  https://github.com/Giogarr/luigi2-griglia/actions/runs/$id"
 }
 @{ N = $N; Script = $Script; runs = $runs } | ConvertTo-Json | Out-File -Encoding utf8 runs_omega.json
 }
@@ -65,19 +74,19 @@ if ($rifare.Count) {
 # 4. log, esito e download delle M
 $righe = @()
 foreach ($key in $runs.Keys) {
-  $id = $runs[$key]; $w, $pl = $key.Split("|"); if (-not $pl) { $pl = "1" }; $nm = Nome $w $pl
+  $id = $runs[$key]; $w, $pl, $pc = $key.Split("|"); if (-not $pl) { $pl = "1" }; if (-not $pc) { $pc = "0.1" }; $nm = Nome $w $pl $pc
   gh run view $id --log | Out-File -Encoding utf8 "log_$nm.txt"
   $concl = gh run view $id --json conclusion -q ".conclusion"
   $tmp = Join-Path $env:TEMP ("luigi2_" + [guid]::NewGuid())
-  gh run download $id -n "${P}_${N}x${N}_w${w}_l$pl" -D $tmp 2>$null
+  gh run download $id -n (Artifact $w $pl $pc) -D $tmp 2>$null
   Get-ChildItem $tmp -Filter "${P}_${N}x${N}_w*" -ErrorAction SilentlyContinue | Copy-Item -Destination . -Force
   $ok = Test-Path "$nm.mat"
-  $righe += "omega $w | ll $pl | run $id | $concl | $nm.mat " + $(if ($ok) { "OK" } else { "MANCANTE" })
+  $righe += "omega $w | ll $pl | c $pc | run $id | $concl | $nm.mat " + $(if ($ok) { "OK" } else { "MANCANTE" })
 }
 
 # 5. zip dei soli .mat
-$mats = @($runs.Keys | ForEach-Object { $w, $pl = $_.Split("|"); "$(Nome $w $pl).mat" } | Where-Object { Test-Path $_ })
-$zip = "${P}_${N}x${N}_" + (($runs.Keys | ForEach-Object { $w, $pl = $_.Split("|"); if (-not $pl) { $pl = "1" }; "w$(Tag $w)_l$(Tag $pl)" }) -join "__") + ".zip"
+$mats = @($runs.Keys | ForEach-Object { $w, $pl, $pc = $_.Split("|"); "$(Nome $w $pl $pc).mat" } | Where-Object { Test-Path $_ })
+$zip = "${P}_${N}x${N}_" + (($runs.Keys | ForEach-Object { $w, $pl, $pc = $_.Split("|"); if (-not $pl) { $pl = "1" }; $t = "w$(Tag $w)_l$(Tag $pl)"; if ($pc -and [double]$pc -ne 0.1) { $t += "_c$(Tag $pc)" }; $t }) -join "__") + ".zip"
 if ($mats.Count) { Compress-Archive -Path $mats -DestinationPath $zip -Force; $righe += "zip: $zip ($($mats.Count) file .mat)" }
 
 $righe | Out-File -Encoding utf8 riepilogo_omega.txt

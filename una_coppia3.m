@@ -1,11 +1,12 @@
-function [MDij, FMDij] = una_coppia3(iL, jL, da, de, omb, ll)
+function [MDij, FMDij] = una_coppia3(iL, jL, da, de, omb, ll, cc)
     if nargin < 5; omb = 3.13; end   % omega_base dell'originale
     if nargin < 6; ll = 1; end       % p.ll dell'originale (p.l non e' usato da nessuna formula)
+    if nargin < 7; cc = 0.1; end     % p.c (smorzamento) dell'originale
 % Corpo del doppio for di Luigi3.m per una coppia (iL,jL). Formule invariate;
 % unica differenza di esecuzione: p passato per closure invece che come global.
     ED = iL*de + .1;
     AL = .5 + jL*da;
-    p.c = 0.1;  p.a = AL;  p.b = 1.0;  p.g = 9.8;  p.l = 1;
+    p.c = cc;  p.a = AL;  p.b = 1.0;  p.g = 9.8;  p.l = 1;
     p.E = ED;   p.ll = ll;  p.e = 1.0;  p.omega_base = omb;
 
     w_forward  = linspace(1.0, 8.0, 150);
