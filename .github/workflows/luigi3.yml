@@ -18,6 +18,9 @@ on:
       C:
         description: "p.c smorzamento (originale 0.1)"
         default: "0.1"
+      ZOOM:
+        description: "finestra a0,as,e0,es (a in (a0,a0+as], E in (e0,e0+es]); default = originale"
+        default: "0.5,2,0.1,0.2"
       K:
         description: "numero di fette (job), max 256"
         default: "200"
@@ -61,7 +64,7 @@ jobs:
           cache: true
       - uses: matlab-actions/run-command@v2
         with:
-          command: run_shard3(${{ matrix.k }}, ${{ inputs.K }}, ${{ inputs.NI }}, ${{ inputs.NJ }}, ${{ inputs.OMEGA }}, ${{ inputs.LL }}, ${{ inputs.C }})
+          command: run_shard3(${{ matrix.k }}, ${{ inputs.K }}, ${{ inputs.NI }}, ${{ inputs.NJ }}, ${{ inputs.OMEGA }}, ${{ inputs.LL }}, ${{ inputs.C }}, ${{ inputs.ZOOM }})
       - uses: actions/upload-artifact@v4
         with:
           name: shard-${{ matrix.k }}
@@ -82,10 +85,10 @@ jobs:
       - uses: matlab-actions/setup-matlab@v2
       - uses: matlab-actions/run-command@v2
         with:
-          command: merge_shards3(${{ inputs.NI }}, ${{ inputs.NJ }}, ${{ inputs.OMEGA }}, ${{ inputs.LL }}, ${{ inputs.C }})
+          command: merge_shards3(${{ inputs.NI }}, ${{ inputs.NJ }}, ${{ inputs.OMEGA }}, ${{ inputs.LL }}, ${{ inputs.C }}, ${{ inputs.ZOOM }})
       - uses: actions/upload-artifact@v4
         with:
-          name: MDFMD_${{ inputs.NI }}x${{ inputs.NJ }}_w${{ inputs.OMEGA }}_l${{ inputs.LL }}_c${{ inputs.C }}
+          name: MDFMD_${{ inputs.NI }}x${{ inputs.NJ }}_w${{ inputs.OMEGA }}_l${{ inputs.LL }}_c${{ inputs.C }}_z${{ inputs.ZOOM }}
           path: |
             MDFMD_${{ inputs.NI }}x${{ inputs.NJ }}_w*.mat
             MDFMD_${{ inputs.NI }}x${{ inputs.NJ }}_w*.csv

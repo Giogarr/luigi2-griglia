@@ -10,3 +10,7 @@ riepilogo_omega.txt
 runs_omega.json
 Luigi3_rif.m
 MDFMD_*
+trascrizione_omega.txt
+frattali/out/
+frattali/log_frattali.txt
+frattali/out_*/
